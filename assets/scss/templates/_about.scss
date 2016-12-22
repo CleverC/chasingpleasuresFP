@@ -1,0 +1,64 @@
+/************************ABOUT SECTION*********************************
+**********************************************************************/
+
+.cc_aboutContainer {
+    height: auto;
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        opacity: 0.5;
+        background: url("../images/orangephotographie_details_0007.jpg") no-repeat center center;
+        background-size: cover;
+    }
+    .cc_aboutContainer_2 {
+        top: 51.5px;
+        width: 100%;
+        height: auto;
+        background-color: rgba(250, 245, 242, 1);
+        position: relative;
+        .cc_border_1 {
+            border: 1px solid rgba(128, 130, 132, 0.4);
+            width: 97%;
+            height: 96%;
+            margin: 0 auto;
+        }
+        .cc_border_2 {
+            border: 1px solid rgba(128, 130, 132, 0.4);
+            width: 99%;
+            height: 98.5%;
+            margin: 0 auto;
+        }
+        .cc_aboutheaderTitleRow {
+            text-align: center;
+            padding-top: 40px;
+        }
+        .cc_aboutusImg1column {
+            height: 450px;
+            position: relative;
+            img {
+                object-fit: cover;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .cc_aboutusImg2column {
+            height: auto;
+            position: relative;
+            img {
+                object-fit: contain;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .cc_aboutrowrow {
+            padding-top: 40px;
+        }
+    }
+}

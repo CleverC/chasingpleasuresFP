@@ -16,11 +16,12 @@
         z-index: 0;
         opacity: 0.5;
         background: url("../images/orangephotographie_details_0007.jpg") no-repeat center center;
+        background-size: cover;
     }
     .cc_menuContainer {
-        top: 51.5px;
+        top: 46.5px;
         width: 100%;
-        height: 100vh;
+        height: 95.5vh;
         background-color: rgba(250, 245, 242, 1);
         position: relative;
         .cc_border_1 {
@@ -31,12 +32,47 @@
         }
         .cc_border_2 {
             border: 1px solid rgba(128, 130, 132, 0.4);
-            width: 99%;
-            height: 98.5%;
+            width: 99.3%;
+            height: 98.7%;
             margin: 0 auto;
+        }
+        .cc_border_5 {
+            margin: auto;
+            width: 79%;
+            border-top: 1px solid rgba(128, 130, 132, 0.5);
+            padding-top: 26px;
+            text-align: center;
+            ul {
+                list-style-type: none;
+                margin: auto;
+                padding: 0;
+            }
+            .cc_sidebar {
+                border: 1px solid rgba(128, 130, 132, 0.3);
+                height: 4.3rem;
+            }
+        }
+        .cc_social-list {
+            width: 98%;
         }
         .cc_mainmenuRow {
             width: 100%;
+            .bwpb-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 0;
+                background-color: rgba(0, 0, 0, 0.32);
+                opacity: 0;
+                color: #fff;
+                @include gallery-img-transition(all 1.7s ease);
+                &:hover {
+                    opacity: 1;
+                    @include gallery-img-transition(all 1.7s ease);
+                }
+            }
         }
         p {
             margin: 0;
@@ -59,15 +95,15 @@
                 @include gallery-img-transition(all 1.7s ease);
             }
             a:hover img {
-                @include gallery-hover-img-transform(scale(1.05));
-                opacity: 0.3;
+                @include gallery-hover-img-transform(scale(1.04));
             }
-            .cc_portraitstext {
-                opacity: 0;
-                color: rgba(128, 130, 132, 0.4);
-                &::hover {
-                    opacity: 1;
-                }
+        }
+        .cc_indivNav {
+            display: inherit;
+            margin: 0 auto;
+            .cc_intialC,
+            .cc_subtextPleasures {
+                text-align: center;
             }
         }
         .cc_portraitsCol {
@@ -93,126 +129,85 @@
     height: 400px;
     background-attachment: fixed;
     background-size: cover;
-    color: #fff;
-    margin-bottom: 66px;
 }
 
 
 /************************ABOUT SECTION*********************************
 **********************************************************************/
 
-.cc_aboutContainer {
-    height: 900px;
-    padding-top: 50px;
-    margin-top: 50px;
-    &:before {
-        content: '';
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-        opacity: 0.5;
-        background: url("../images/orangephotographie_details_0007.jpg") no-repeat center center;
-    }
-    .cc_aboutContainer_2 {
-        width: 100%;
-        height: 100vh;
-        background-color: rgba(250, 245, 242, 1);
-        position: relative;
-        .cc_border_1 {
-            border: 1px solid rgba(128, 130, 132, 0.4);
-            width: 97%;
-            height: 96%;
-            margin: 0 auto;
-        }
-        .cc_border_2 {
-            border: 1px solid rgba(128, 130, 132, 0.4);
-            width: 99%;
-            height: 98.5%;
-            margin: 0 auto;
-        }
-    }
-}
+// REFER TO _ABOUT SCSS
 
-
-/************************FILLER SECTION*********************************
+/************************FILLER SECTION 2*********************************
 **********************************************************************/
 
-// THE FILLER SECTION //
+// THE FILLER SECTION 2 //
 .cc_fillerTextColumn2 {
     background: url('../images/orangephotographie_0008.jpg');
-    height: 400px;
+    height: 450px;
     background-attachment: fixed;
     background-size: cover;
     color: #fff;
-    margin-bottom: 66px;
 }
 
 
 /************************DETAILS SECTION**************************
 **********************************************************************/
 
-.cc_detailsContainer {
-    height: 900px;
-    width: 100%;
-    background: rgba(250, 245, 242, 1);
-    .cc_detailsText {
-        width: 100%;
-        height: 100vh;
-        position: relative;
-        .cc_border_1b {
-            border-top: 1px solid rgba(128, 130, 132, 0.4);
-            border-bottom: 1px solid rgba(128, 130, 132, 0.4);
-            width: 97%;
-            height: 96%;
-            margin: 0 auto;
-        }
-        .cc_border_2b {
-            border-top: 1px solid rgba(128, 130, 132, 0.4);
-            border-bottom: 1px solid rgba(128, 130, 132, 0.4);
-            width: 99%;
-            height: 98.5%;
-            margin: 0 auto;
-        }
-    }
+// REFER TO _DETAILS SCSS
+
+/************************FILLER SECTION 3*********************************
+**********************************************************************/
+
+// THE FILLER SECTION 3 //
+.cc_fillerTextColumn3 {
+    background: url('../images/orangephotographie_0008.jpg');
+    height: 400px;
+    background-attachment: fixed;
+    background-size: cover;
 }
+
 
 /************************CONTACT SECTION*******************************
 **********************************************************************/
-.cc_contactContainer{
-  height:909px;
-  padding-top:20px;
-          background-size:cover;
-          position:relative;
-    &:before {
-        content: '';
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-        opacity: 0.5;
-        background: url("../images/orangephotographie_details_0007.jpg") no-repeat center center;
 
-    }
-    .cc_contactContainer_2 {
-        width: 78%;
-        height: 709px;
-        top:86px;
-        background-color: rgba(250, 245, 242, 1);
-        position: relative;
-        .cc_border_1 {
-            border: 1px solid rgba(128, 130, 132, 0.4);
-            width: 97%;
-            height: 96%;
-            margin: 0 auto;
-        }
-        .cc_border_2 {
-            border: 1px solid rgba(128, 130, 132, 0.4);
-            width: 99%;
-            height: 98.5%;
-            margin: 0 auto;
-        }
+// REFER TO _CONTACT SCSS
+
+/************************UP ARROW SCROLL ICON*************************
+**********************************************************************/
+
+#toTop {
+    width: 44px;
+    background: rgba(250, 245, 242, 1);
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    position: fixed;
+    bottom: 66px;
+    right: 10px;
+    cursor: pointer;
+    transition: color 300ms, background-color 300ms, opacity 300ms;
+    -moz-transition: color 300ms, background-color 300ms, opacity 300ms;
+    -o-transition: color 300ms, background-color 300ms, opacity 300ms;
+    -webkit-transition: color 300ms, background-color 300ms, opacity 300ms;
+    z-index: 9;
+    border-radius: 5px;
+    display: block;
+}
+
+#toTop i {
+    color: #fff;
+    font-size: 1.5em;
+}
+
+#toTop:hover {
+    opacity: 0.78 !important;
+}
+
+//-----------TO TOP ARROW MEDIA QUERIES----------//
+#toTop {
+    @include breakpoint(small only) {
+        padding: 4px;
+        width: 34px;
+        bottom: 88px;
+        opacity: 0.30 !important;
     }
 }

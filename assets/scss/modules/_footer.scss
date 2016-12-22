@@ -1,18 +1,35 @@
+/************************FOOTER SECTION*******************************
+**********************************************************************/
+
 #footer-container {
-  max-width: 100%;
-  width: 100%;
-  margin: 0 auto;
-  border-top: 1px solid #ccc;
-  margin-top: rem-calc(60);
-
-  #footer {
-    @include grid-row();
-    padding: rem-calc(30) 0;
-
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    background: rgba(250, 245, 242, 1);
+    #footer {
+        @include grid-row();
+        padding: rem-calc(20) 0;
+        text-align: center;
+        ul {
+            list-style-type: none;
+            margin: auto;
+            padding: 0;
+        }
+        .cc_border_5 {
+            margin: auto;
+            width: 92%;
+            border-top: 1px solid rgba(128, 130, 132, 0.4);
+            padding-top: 16px;
+        }
+        .cc_sidebar {
+            border: 1px solid rgba(128, 130, 132, 0.3);
+            height: 4.3rem;
+        }
+        #cc_sitebyLink{
+          margin-bottom:0.5rem;
+        }
     }
-  }
+    .cc_social-list {
+        width: 76%;
+    }
 }
