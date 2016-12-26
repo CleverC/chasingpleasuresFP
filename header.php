@@ -14,7 +14,7 @@
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link href="http://fonts.googleapis.com/css?family=IM+Fell+English:regular,italic|Crimson+Text:regular|Quicksand:regular|Playfair+Display:italic" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=IM+Fell+English:regular,italic|Crimson+Text:regular|Great+Vibes|Quicksand:regular|Playfair+Display:italic" rel="stylesheet" type="text/css">
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>

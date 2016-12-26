@@ -2,7 +2,7 @@
 **********************************************************************/
 
 .cc_aboutContainer {
-    height: auto;
+    height: 1930px;
     position: relative;
     &:before {
         content: '';
@@ -15,31 +15,83 @@
         background: url("../images/orangephotographie_details_0007.jpg") no-repeat center center;
         background-size: cover;
     }
-    .cc_aboutContainer_2 {
-        top: 51.5px;
+    .cc_aboutContainer2 {
+        top: 91px;
         width: 100%;
         height: auto;
-        background-color: rgba(250, 245, 242, 1);
+        background-color: $main-bk-color;
         position: relative;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        h2 {
+            font-family: 'Monsieur La Doulaise', $body-font-family;
+        }
+        .cc_abouttxt1stColumn {
+            padding-bottom: 50px;
+            .cc_topTtxt {
+                position: relative;
+                left: 47%;
+                transform: translateX(-50%);
+                p{
+                    font-size:100px;
+                    color:#fff;
+                    font-family: 'bodega script';
+                    font-weight:400;
+                    text-shadow:0 0 #000;
+                    height:113px;
+                    margin:0;
+                }
+            }
+            .cc_subTtxt {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 88px;
+                z-index:2;
+            }
+            .cc_subHdiv{
+                position:relative;
+            }
+        }
         .cc_border_1 {
-            border: 1px solid rgba(128, 130, 132, 0.4);
+            border: $cc_border;
             width: 97%;
-            height: 96%;
             margin: 0 auto;
+            margin-top: 6px;
+            margin-bottom: 6px;
         }
         .cc_border_2 {
-            border: 1px solid rgba(128, 130, 132, 0.4);
+            border: $cc_border;
             width: 99%;
-            height: 98.5%;
             margin: 0 auto;
+            margin-top: 6px;
+            margin-bottom: 6px;
         }
-        .cc_aboutheaderTitleRow {
+        .cc_aboutheadertitleRow {
             text-align: center;
-            padding-top: 40px;
+            // padding-top: 40px;
+            margin-bottom: 0px;
+            .cc_asubH {
+                line-height: 3;
+            }
+            .cc_ap1 {
+                font-family: 'Copperplate Light', $body-font-family;
+                font-size: 11px;
+                padding-bottom: 12px;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+            }
         }
-        .cc_aboutusImg1column {
+        .cc_ap2ndrow,
+        .cc_ptxcol1,
+        .cc_apcol2 {
+            text-align: justify !important;
+        }
+        .cc_aboutimg1Column {
             height: 450px;
             position: relative;
+            overflow: hidden;
             img {
                 object-fit: cover;
                 position: absolute;
@@ -47,18 +99,37 @@
                 width: 100%;
             }
         }
-        .cc_aboutusImg2column {
+        .cc_aboutimg2Column {
             height: auto;
             position: relative;
+            overflow: hidden;
             img {
-                object-fit: contain;
+                object-fit: cover;
                 position: absolute;
                 height: 100%;
                 width: 100%;
+                padding-top: 36px;
             }
         }
-        .cc_aboutrowrow {
-            padding-top: 40px;
+        .cc_aboutmeetRow {
+            padding-top: 85px;
+            padding-bottom: 120px;
+            .cc_aboutustextTitle {
+                margin: 0 auto;
+                line-height: 2.5;
+            }
+        }
+        .cc_asubH {
+            padding-bottom: 10px;
+        }
+        .cc_aboutusparaText {
+            text-align: justify;
+        }
+        .cc_aq {
+            margin: 0 auto;
+            font-family: 'Copperplate Light', $body-font-family;
+            font-size: 12px;
+            text-transform: uppercase;
         }
     }
 }

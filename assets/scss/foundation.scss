@@ -80,6 +80,7 @@
 @import "modules/footer";
 @import "modules/sidebar";
 @import "modules/editor-style";
+@import "modules/_custom-fonts";
 
 // Components
 @import "components/buttons";
@@ -97,4 +98,5 @@
 @import "templates/page-default";
 @import "templates/page-sidebar-left";
 @import "templates/page-full-width";
+@import "templates/quotes";
 @import "templates/single-post";

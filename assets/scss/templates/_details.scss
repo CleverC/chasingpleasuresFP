@@ -2,30 +2,130 @@
 **********************************************************************/
 
 .cc_detailsContainer {
-    height: 900px;
+    height: 980px;
     width: 100%;
-    background: rgba(250, 245, 242, 1);
-    .cc_detailsText {
+    background: $main-bk-color;
+    .cc_sidebar {
+        border: 1px solid rgba(128, 130, 132, 0.3);
+        height: 46.3rem;
+    }
+    .cc_detailsContainer2 {
         max-width: 100%;
         height: 100%;
         position: relative;
         margin: 0;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         .cc_border_1b {
-            border-top: 1px solid rgba(128, 130, 132, 0.4);
-            border-bottom: 1px solid rgba(128, 130, 132, 0.4);
+            border-top: $cc_border;
+            border-bottom: $cc_border;
             width: 100%;
             height: 96%;
             margin: 0 auto;
         }
         .cc_border_2b {
-            border-top: 1px solid rgba(128, 130, 132, 0.4);
-            border-bottom: 1px solid rgba(128, 130, 132, 0.4);
+            border-top: $cc_border;
+            border-bottom: $cc_border;
             width: 100%;
-            height: 98.5%;
+            height: 98.7%;
             margin: 0 auto;
         }
-        .cc_detailsContainer_2 {
+        .cc_detailsContainer3 {
             margin: 0 auto;
+            position: absolute;
+            .cc_detailsimgRow {
+                padding-bottom: 42px;
+            }
+            .cc_detailsimgleft,
+            .cc_detailsimgright {
+                position: relative;
+                height: 420px;
+                overflow: hidden;
+                img {
+                    object-fit: cover;
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            .cc_detailsleft {
+                padding-right: 90px;
+                text-align: center;
+                p {
+                    text-align: justify;
+                }
+                h5 {
+                    font-family: 'Copperplate Light', $body-font-family;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    letter-spacing: 4px;
+                    padding-bottom: 30px;
+                    text-shadow: 1px 6px 10px rgba(#000000, 0.3);
+                }
+                .cc_fixpp {
+                    text-align: center;
+                    padding-bottom: 20px;
+                }
+                .cc_fixppa {
+                    text-align: center;
+                }
+                .cc_fixh5 {
+                    padding-top: 44px;
+                }
+                .cc_fixpara {
+                    padding-bottom: 10px;
+                }
+            }
+            .cc_detailsright {
+                padding-left: 60px;
+                padding-bottom:90px;
+                .cc_topTtxt {
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    p {
+                        font-size: 100px;
+                        color: #fff;
+                        font-family: 'bodega script';
+                        font-weight: 400;
+                        text-shadow: 0 0 #000;
+                        height: 130px;
+                        margin: 0;
+                    }
+                }
+                .cc_subTtxt {
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: 128px;
+                    z-index: 2;
+                    height:65px;
+                }
+                .cc_subHdiv {
+                    position: relative;
+                }
+            }
+        }
+        .cc_border_6 {
+            border: $cc_border;
+            width: 76%;
+            margin: 0 auto;
+        }
+        .cc_detailsheadertitleRow {
+            margin: 0 auto;
+            text-align: center;
+            h5 {
+                font-family: 'Copperplate Light', $body-font-family;
+                font-size: 12px;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                margin-bottom: 30px;
+                margin-top: 16px;
+            }
+        }
+        .cc_detailsrtxt2Row {
+            p {
+                text-align: justify;
+            }
         }
     }
 }

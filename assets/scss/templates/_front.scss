@@ -1,9 +1,28 @@
 /************************HERO SECTION*********************************
 **********************************************************************/
 
+body {
+    h2 {
+        font-family: 'Monsieur La Doulaise', $body-font-family;
+    }
+    h4 {
+        font-family: 'Cinzel', $body-font-family;
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+    }
+    p {
+        font-family: 'Quicksand', $body-font-family;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+    h5 {
+        margin-bottom: 0;
+    }
+}
+
 #cc_heroContainer {
     width: 100%;
-    height: 116vh;
+    height: 110vh;
     background-size: cover;
     position: relative;
     &:before {
@@ -21,27 +40,32 @@
     .cc_menuContainer {
         top: 46.5px;
         width: 100%;
-        height: 95.5vh;
-        background-color: rgba(250, 245, 242, 1);
+        height: 84%;
+        background-color: $main-bk-color;
         position: relative;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         .cc_border_1 {
-            border: 1px solid rgba(128, 130, 132, 0.4);
+            border: $cc_border;
             width: 97%;
             height: 96%;
             margin: 0 auto;
         }
         .cc_border_2 {
-            border: 1px solid rgba(128, 130, 132, 0.4);
+            border: $cc_border;
             width: 99.3%;
             height: 98.7%;
             margin: 0 auto;
         }
         .cc_border_5 {
             margin: auto;
+            margin-top: 0px;
             width: 79%;
-            border-top: 1px solid rgba(128, 130, 132, 0.5);
+            border-top: 1.5px solid rgba(128, 130, 132, 0.3);
             padding-top: 26px;
             text-align: center;
+            a {
+                color: rgba(128, 130, 132, 1);
+            }
             ul {
                 list-style-type: none;
                 margin: auto;
@@ -51,9 +75,6 @@
                 border: 1px solid rgba(128, 130, 132, 0.3);
                 height: 4.3rem;
             }
-        }
-        .cc_social-list {
-            width: 98%;
         }
         .cc_mainmenuRow {
             width: 100%;
@@ -67,10 +88,15 @@
                 background-color: rgba(0, 0, 0, 0.32);
                 opacity: 0;
                 color: #fff;
-                @include gallery-img-transition(all 1.7s ease);
+                @include gallery-img-transition(all 1.4s ease);
                 &:hover {
                     opacity: 1;
-                    @include gallery-img-transition(all 1.7s ease);
+                    @include gallery-img-transition(all 1.2s ease);
+                }
+                h5 {
+                    font-family: 'Monsieur La Doulaise', $body-font-family;
+                    font-size: 45px;
+                    text-shadow: 1px 6px 10px rgba(#000, 1.2);
                 }
             }
         }
@@ -83,8 +109,7 @@
             min-height: 430px;
             position: relative;
             overflow: hidden;
-            border-top: 30px solid transparent;
-            border-bottom: 30px solid transparent;
+            border-bottom: 10px solid transparent;
             margin: 0px;
             padding: 0px;
             img {
@@ -92,7 +117,7 @@
                 position: absolute;
                 width: 100%;
                 height: 100%;
-                @include gallery-img-transition(all 1.7s ease);
+                @include gallery-img-transition(all 1.4s ease);
             }
             a:hover img {
                 @include gallery-hover-img-transform(scale(1.04));
@@ -101,9 +126,44 @@
         .cc_indivNav {
             display: inherit;
             margin: 0 auto;
-            .cc_intialC,
+            text-align: center;
+            padding-top: 22px;
+            a {
+                color: rgba(128, 130, 132, 1);
+            }
+            .top-bar-left,
+            .top-bar-right {
+                font-family: 'Copperplate Light', $body-font-family;
+                font-size: 12px;
+                letter-spacing: 4px;
+                text-transform: uppercase;
+            }
+            .top-bar-left {
+                padding-left: 38px;
+                padding-right: 50px;
+                text-shadow: 1px 6px 10px rgba(#000000, 0.3);
+                
+            }
+            .top-bar-center {
+                font-family: 'Monsieur La Doulaise', $body-font-family;
+                font-size: 42px;
+                font-weight: 100;
+                padding-left: 42px;
+                padding-right:14px;
+                color: rgba(128, 130, 132, 1);
+            }
+            .top-bar-right {
+                padding-left: 36px;
+                padding-right:18px;
+                text-shadow: 1px 6px 10px rgba(#000000, 0.3);
+            }
+            
             .cc_subtextPleasures {
-                text-align: center;
+                font-family: 'Cinzel', $body-font-family;
+                font-size: 14px;
+                letter-spacing: 5px;
+                line-height: 1.2;
+                text-shadow: 1px 6px 10px rgba(#000000, 0.3);
             }
         }
         .cc_portraitsCol {
@@ -116,11 +176,61 @@
         .cc_familyCol {
             margin-right: 122px;
         }
+        .cc_social-holder {
+            padding-left: 39px;
+            ul {
+                display: table;
+                margin: 0 auto;
+            }
+            ul li {
+                display: inline-block;
+            }
+            .cc_social-list {
+                a {
+                    padding: 10px;
+                }
+            }
+            .cc_social-holderTitle {
+                font-family: 'Monsieur La Doulaise', $body-font-family;
+                font-size: 36px;
+                margin-bottom: 0px;
+                line-height: 1;
+                letter-spacing: 1px;
+            }
+        }
+        .cc_Welcome {
+            font-family: 'Monsieur La Doulaise', $body-font-family;
+            font-size: 36px;
+            letter-spacing: 1px;
+            padding-right: 24px;
+        }
+        .cc_fineartmain {
+            font-family: 'Crimson Text', $body-font-family;
+            font-size: 14px;
+            letter-spacing: 6.1px;
+            text-indent:6.1px;
+            line-height: 2.7;
+            text-transform: uppercase;
+        }
+        .cc_subfooterhome {
+            font-family: 'Copperplate Light', $body-font-family;
+            font-size: 10px;
+            letter-spacing: 7px;
+            text-transform: uppercase;
+            padding-left:6px;
+        }
+    }
+    .cc_cpCol {
+        .cc_border_6,
+        .cc_border_6a {
+            border: 1px solid rgba(128, 130, 132, 0.3);
+            width: 80px;
+        }
     }
 }
 
 
-/************************FILLER SECTION*********************************
+/************************FILLER SECTION*******************************
 **********************************************************************/
 
 // THE FILLER SECTION //
@@ -129,15 +239,16 @@
     height: 400px;
     background-attachment: fixed;
     background-size: cover;
+    color: #fff;
 }
 
 
-/************************ABOUT SECTION*********************************
+/************************ABOUT SECTION********************************
 **********************************************************************/
 
 // REFER TO _ABOUT SCSS
 
-/************************FILLER SECTION 2*********************************
+/************************FILLER SECTION 2*****************************
 **********************************************************************/
 
 // THE FILLER SECTION 2 //
@@ -150,27 +261,51 @@
 }
 
 
-/************************DETAILS SECTION**************************
+/************************QUOTES SECTION*******************************
 **********************************************************************/
 
-// REFER TO _DETAILS SCSS
+//REFER TO _QUOTES SCSS
 
-/************************FILLER SECTION 3*********************************
+/************************FILLER SECTION 2*****************************
 **********************************************************************/
 
 // THE FILLER SECTION 3 //
 .cc_fillerTextColumn3 {
     background: url('../images/orangephotographie_0008.jpg');
-    height: 400px;
+    height: 450px;
     background-attachment: fixed;
     background-size: cover;
+    color: #fff;
 }
 
 
-/************************CONTACT SECTION*******************************
+/************************DETAILS SECTION******************************
+**********************************************************************/
+
+// REFER TO _DETAILS SCSS
+
+/************************FILLER SECTION 4*****************************
+**********************************************************************/
+
+// THE FILLER SECTION 4 //
+.cc_fillerTextColumn4 {
+    background: url('../images/orangephotographie_0008.jpg');
+    height: 400px;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+
+/************************CONTACT SECTION******************************
 **********************************************************************/
 
 // REFER TO _CONTACT SCSS
+
+/************************FOOTER SECTION******************************
+**********************************************************************/
+
+// REFER TO _FOOTER SCSS
 
 /************************UP ARROW SCROLL ICON*************************
 **********************************************************************/

@@ -10,26 +10,89 @@
         @include grid-row();
         padding: rem-calc(20) 0;
         text-align: center;
+        padding-top: 12px;
+        padding-bottom: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         ul {
             list-style-type: none;
             margin: auto;
             padding: 0;
         }
-        .cc_border_5 {
-            margin: auto;
-            width: 92%;
-            border-top: 1px solid rgba(128, 130, 132, 0.4);
-            padding-top: 16px;
-        }
         .cc_sidebar {
             border: 1px solid rgba(128, 130, 132, 0.3);
             height: 4.3rem;
         }
-        #cc_sitebyLink{
-          margin-bottom:0.5rem;
+        .cc_border_5 {
+            margin: auto;
+            width: 92%;
+            border-top: 1px solid rgba(128, 130, 132, 0.4);
+            padding-top: 6px;
+            .cc_sitebyCol {
+                padding:12px 18px 10px 10px;
+                #cc_sitebyLink {
+                    margin: 0;
+                    text-transform: uppercase;
+                    font-size: 10px;
+                    color: rgba(128, 130, 132, 1);
+                }
+                .cc_copyR {
+                    @extend #cc_sitebyLink;
+                    padding-top: 4px;
+                    margin-bottom: 0px;
+                    a {
+                        color: rgba(128, 130, 132, 1);
+                    }
+                    .cc_copylinkClass {
+                        margin-bottom: 0px;
+                        font-size:12px;
+                    }
+                }
+            }
+            .cc_cpCol {
+                .cc_middlemenufooter {
+                    padding-top: 20px;
+                }
+                .cc_cpfootlink {
+                    font-family: 'Monsieur La Doulaise', $body-font-family;
+                    font-size: 34px;
+                    font-weight: 100;
+                    color: rgba(128, 130, 132, 1);
+                    line-height: 0;
+                    // text-shadow: 1px 6px 10px rgba(#000, 1.2);
+                }
+                .cc_subfooterhome {
+                    font-family: 'Crimson Text', $body-font-family;
+                    font-size: 14px;
+                    letter-spacing: 6.1px;
+                    line-height: 2.7;
+                    text-transform: uppercase;
+                    color: rgba(128, 130, 132, 1);
+                    text-shadow: 1px 6px 10px rgba(#000000, 0.3);
+                    // text-shadow: 1px 6px 10px rgba(#000, 1.2);
+                }
+            }
+            .cc_social-holder {
+                ul {
+                    display: table;
+                    margin: 0 auto;
+                }
+                ul li {
+                    display: inline-block;
+                }
+                .cc_social-holderTitle {
+                    font-family: 'Monsieur La Doulaise', $body-font-family;
+                    font-size: 36px;
+                    text-transform: none;
+                    letter-spacing: 0;
+                    margin-bottom: 0;
+                }
+                .cc_social-list {
+                    a {
+                        padding: 10px;
+                        color: rgba(128, 130, 132, 1);
+                    }
+                }
+            }
         }
-    }
-    .cc_social-list {
-        width: 76%;
-    }
-}
+    } //-- end of main row
+} //--end of footer container

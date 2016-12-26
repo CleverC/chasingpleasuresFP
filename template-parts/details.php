@@ -1,11 +1,9 @@
-<!-- DETAILS SECTION -->
-
 <div class="cc_detailsContainer">
-    <div class="cc_detailsText row large-collapse align-middle">
+    <div class="cc_detailsContainer2 row large-collapse align-middle">
         <div class="cc_border_1b row expanded align-middle">
-            <div class="cc_border_2b row expanded align-middle align-center">
-                <div class="cc_detailsContainer_2 row large-collapse align-middle">
-                    <div class="medium-5 column cc_detailsleft">
+            <div class="cc_border_2b row expanded align-middle">
+                <div class="cc_detailsContainer3 row expanded large-collapse align-center align-middle">
+                    <div class="medium-3 column cc_detailsleft">
                         <?php 
 
                             $args= array(
@@ -17,7 +15,11 @@
                         <?php the_content();?>
                         <?php endwhile; wp_reset_query(); ?>
                     </div>
-                    <div class="medium-7 column cc_detailsright">
+                    <div class="cc_sidebar"></div>
+                    <div class="medium-6 column cc_detailsright">
+                    <!-- header -->
+                        <div class="cc_detailsrtxt1Row row">
+                        <div class="cc_detailsheadertitleRow">
                         <?php 
 
                             $args= array(
@@ -28,6 +30,50 @@
                         ?>
                         <?php the_content();?>
                         <?php endwhile; wp_reset_query(); ?>
+                    </div>
+                </div>
+                    <!-- header end -->
+                    <div class="cc_detailsimgRow row align-center">
+                        <div class="medium-6 column cc_detailsimgleft">
+                            <?php
+
+                                $args=array(
+                                    'page_id' => 112,
+                                    );
+                                $query = new WP_Query($args);
+                                while($query->have_posts()) : $query->the_post();
+                            ?>
+                            <?php the_content();?>
+                            <?php endwhile; wp_reset_query(); ?>
+                        </div>
+                        <div class="medium-6 column cc_detailsimgright">
+                            <?php
+
+                                $args=array(
+                                    'page_id' => 114,
+                                    );
+                                $query = new WP_Query($args);
+                                while($query->have_posts()) : $query->the_post();
+                            ?>
+                            <?php the_content();?>
+                            <?php endwhile; wp_reset_query(); ?>
+                        </div>
+                        </div>
+                        <div class="cc_detailsrtxt2Row row">
+                        <div class="medium-12 column">
+                        <?php
+
+                                $args=array(
+                                    'page_id' => 117,
+                                    );
+                                $query = new WP_Query($args);
+                                while($query->have_posts()) : $query->the_post();
+                            ?>
+                            <?php the_content();?>
+                            <?php endwhile; wp_reset_query(); ?>
+                        </div>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>

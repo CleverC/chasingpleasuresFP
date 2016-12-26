@@ -1,6 +1,5 @@
-<!-- HERO SECTION -->
 <header id="cc_heroContainer" role="banner">
-        <div class="cc_menuContainer row large-collapse align-middle">
+    <div class="cc_menuContainer row large-collapse align-middle">
             <div class="cc_border_1 row align-middle">
                 <div class="cc_border_2 row align-middle">
                     <!-- WORDPRESS MENU -->
@@ -57,27 +56,31 @@
                             </a>
                         </div>
                     </div>
-                    <!-- SOCIAL MEDIA LINKS HOLDER -->
+                    <!-- BOTTOM LINKS/SOCIAL MEDIA HOLDER -->
                     <div class="cc_border_5 row align-middle align-center">
                         <div class="medium-3 column cc_welcomeText">
-                            <h4 class="cc_Welcome">Welcome</h4>
+                            <h2 class="cc_Welcome">welcome</h2>
                         </div>
                         <div class="cc_sidebar"></div>
                         <div class="medium-5 column cc_cpCol">
                             <ul class="cc_middlemenucolheader">
                                 <li class="home">
                                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                                        <?php bloginfo( 'name' ); ?>
+                                    <p class="cc_fineartmain">Fine Art Photography</p>
                                     </a>
                                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                                        <h5 class="cc_subfooterhome">Fine Art Photography</h5>
                                     </a>
                                 </li>
                             </ul>
+                            <div class="cc_midcol row align-middle align-center">
+                            <div class="cc_border_6"></div>
+                            <p class="cc_subfooterhome">Los Angeles</p>
+                            <div class="cc_border_6"></div>
+                            </div>
                         </div>
                         <div class="cc_sidebar"></div>
                         <div class="medium-3 column cc_social-holder">
-                            <h4 class="cc_social-holderTitle">Socialize</h4>
+                            <h2 class="cc_social-holderTitle">socialize</h2>
                             <ul class="cc_social-list menu">
                                 <li><a href="https://www.instagram.com/chasing_pleasures" title="Instagram" target="_blank"><i class="fa fa-instagram" aria-hidden="true" ></i></a></li>
                                 <li><a href="https://www.facebook.com/Chasing-Pleasures-Fine-Art-Photography-535058686581850/" title="Facebook" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -89,4 +92,4 @@
                 </div>
             </div>
         </div>
-    </header>
+</header>

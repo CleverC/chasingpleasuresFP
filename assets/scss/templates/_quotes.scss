@@ -1,0 +1,103 @@
+/************************QUOTES SECTION*******************************
+**********************************************************************/
+
+.cc_quotesContainer {
+    height: 690px;
+    width: 100%;
+    background: $main-bk-color;
+    .cc_quotesContainer2 {
+        max-width: 100%;
+        height: 100%;
+        position: relative;
+        margin: 0;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        .cc_border_1b {
+            border-top: $cc_border;
+            border-bottom: $cc_border;
+            width: 100%;
+            height: 96%;
+            margin: 0 auto;
+        }
+        .cc_border_2b {
+            border-top: $cc_border;
+            border-bottom: $cc_border;
+            width: 100%;
+            height: 98.5%;
+            margin: 0 auto;
+        }
+        .cc_quotesContainer3 {
+            height: 75%;
+            margin: 0 auto;
+            .cc_quotesLeft {
+                position: relative;
+                height: 100%;
+                margin-left: 20px;
+                margin-right: 40px;
+                overflow: hidden;
+                img {
+                    object-fit: contain;
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            .cc_quotesRight {
+                text-align: center;
+                position:relative;
+                .cc_qp {
+                    text-align: justify;
+                    padding-bottom: 22px;
+                    padding-left: 80px;
+                    padding-right: 80px;
+                }
+                .cc_topTtxt {
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    p {
+                        font-size: 100px;
+                        color: #fff;
+                        font-family: 'bodega script';
+                        font-weight: 400;
+                        text-shadow: 0 0 #000;
+                        height: 113px;
+                    }
+                }
+                .cc_subTtxt {
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: 60px;
+                    z-index: 2;
+                }
+                .cc_subHdiv {
+                    position: relative;
+                }
+            }
+            .cc_border_6 {
+                border: $cc_border;
+                width: 45%;
+                margin: 0 auto;
+            }
+            .cc_qsubH {
+                padding-bottom: 22px;
+            }
+            .cc_qbq {
+                padding-top: 36px;
+                padding-bottom: 20px;
+                margin: 0 auto;
+                font-family: 'Copperplate Light', $body-font-family;
+                font-size: 12px;
+                text-transform: uppercase;
+            }
+            .cc_qbtn {
+                font-family: 'Monsieur La Doulaise', $body-font-family;
+                font-size: 36px;
+                color: rgba(128, 130, 132, 1);
+            }
+        }
+    }
+}
+
+
+

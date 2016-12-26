@@ -1,5 +1,5 @@
-<!-- Wordpress Menu -->
 		<div class="cc_indivNav">
+		<div class="cc_indivnavrow row align-middle">
 			<div class="top-bar-left">
 				<?php foundationpress_top_bar_l(); ?>
 
@@ -8,11 +8,10 @@
 				<?php endif; ?>
 			</div>
 			<div class="top-bar-center">
-				<p class="cc_intialC">C</p>
 				 	<ul class="menu">
-						<li class="home"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
+						<li class="home"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">ChasingPleasures</a></li>
 					</ul>
-					<p class="cc_subtextPleasures">Pleasures</p>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><p class="cc_subtextPleasures">Photography</p></a>
 			</div>
 			<div class="top-bar-right">
 				<?php foundationpress_top_bar_r(); ?>
@@ -22,3 +21,4 @@
 				<?php endif; ?>
 			</div>
 		</div>
+	</div>

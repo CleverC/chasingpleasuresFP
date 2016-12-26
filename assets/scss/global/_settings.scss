@@ -65,7 +65,7 @@ $black: #0a0a0a;
 $white: #fefefe;
 $outer-space: #2c3840;
 $body-background: $white;
-$body-font-color: $black;
+$body-font-color: rgba(128, 130, 132, 1);
 $body-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
@@ -125,9 +125,9 @@ $header-styles: (
   ),
   medium: (
     'h1': ('font-size': 48),
-    'h2': ('font-size': 40),
+    'h2': ('font-size': 38),
     'h3': ('font-size': 31),
-    'h4': ('font-size': 25),
+    'h4': ('font-size': 24),
     'h5': ('font-size': 20),
     'h6': ('font-size': 16),
   ),
@@ -624,6 +624,10 @@ $topbar-unstack-breakpoint: medium;
 
 // 38. My Variables
 //-----------------
+$cc_border: 1px solid rgba(128, 130, 132, 0.4);
+$main-bk-color: rgba(250, 245, 242, 1);
+$subH-font-size: 22px;
+
 
 // 39. My Mixins
 //-----------------
@@ -638,3 +642,4 @@ $topbar-unstack-breakpoint: medium;
       -webkit-transition: $transition;
       transition: $transition;
 }
+

@@ -6,7 +6,7 @@ get_header(); ?>
     <!-- HERO SECTION -->
     <?php get_template_part('template-parts/hero'); ?>
     
-    <!-- Filler SECTION -->
+    <!-- FILLER SECTION -->
     <div class="cc_fillerTextColumn">
         <div class="cc_fillerTextr row">
             <?php 
@@ -45,9 +45,9 @@ get_header(); ?>
         </div>
     </div>
 
-    <!-- DETAILS SECTION -->
-    <?php get_template_part('template-parts/details'); ?>
-
+    <!-- QUOTES SECTION -->
+    <?php get_template_part('template-parts/quotes'); ?>
+    
     <!-- FILLER SECTION 3 -->
     <div class="cc_fillerTextColumn3">
         <div class="cc_fillerTextr3 row">
@@ -66,7 +66,29 @@ get_header(); ?>
         </div>
     </div>
 
-    <!-- CONTACT US SECTION -->
+
+    <!-- DETAILS SECTION -->
+    <?php get_template_part('template-parts/details'); ?>
+
+    <!-- FILLER SECTION 4 -->
+    <div class="cc_fillerTextColumn4">
+        <div class="cc_fillerTextr4 row">
+            <?php 
+
+                $args= array(
+                'page_id' => 98,
+                );
+                $query = new WP_Query($args);
+                while($query->have_posts()) : $query->the_post();
+                ?>
+            <p>
+                <?php the_content();?> </p>
+            <?php endwhile; wp_reset_query(); 
+                ?>
+        </div>
+    </div>
+
+    <!-- CONTACT SECTION -->
     <?php get_template_part('template-parts/contact'); ?>
 
     <?php do_action( 'foundationpress_before_content' ); ?>

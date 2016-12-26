@@ -1,8 +1,8 @@
-/************************CONTACT SECTION*******************************
+/************************CONTACT SECTION******************************
 **********************************************************************/
 
 .cc_contactContainer {
-    height: 909px;
+    height: 890px;
     background-size: cover;
     position: relative;
     &:before {
@@ -16,20 +16,21 @@
         background: url("../images/orangephotographie_details_0007.jpg") no-repeat center center;
         background-size: cover;
     }
-    .cc_contactContainer_2 {
+    .cc_contactContainer2 {
         width: 78%;
         height: 709px;
         top: 86px;
-        background-color: rgba(250, 245, 242, 1);
+        background-color: $main-bk-color;
         position: relative;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         .cc_border_1 {
-            border: 1px solid rgba(128, 130, 132, 0.4);
+            border: $cc_border;
             width: 97%;
             height: 96%;
             margin: 0 auto;
         }
         .cc_border_2 {
-            border: 1px solid rgba(128, 130, 132, 0.4);
+            border: $cc_border;
             width: 99%;
             height: 98.5%;
             margin: 0 auto;
@@ -37,11 +38,11 @@
         .cc_rowContactseven {
             font-weight: 300;
             .cc_contactrowrow {
-                margin: 0 auto;
                 height: 520px;
+                width: 100%;
             }
             #cc_contactleft {
-                height: auto;
+                height: 100%;
                 position: relative;
                 float: left;
                 img {
@@ -51,13 +52,71 @@
                     width: 100%;
                     padding-right: 20px;
                 }
-                ::-webkit-input-placeholder {
-                    text-transform: uppercase;
-                }
             }
             #cc_contactright {
                 float: right;
+                padding-left: 100px;
+                padding-top: 42px;
+                .cc_contactTitle {
+                    text-align: center;
+                    padding-bottom: 10px;
+                }
+                .cc_contactsubTitle {
+                    text-align: center;
+                    padding-bottom: 6px;
+                }
+            }
+            textarea,
+            input {
+                width: 100%;
+                height: 52px;
+                margin-bottom: 0px;
+                padding: 5px 10px;
+                box-shadow: none;
+                -webkit-appearance: textarea;
+                background-color: transparent;
+                border-top: 2px solid rgba(128, 130, 132, 0.2);
+                border-left: none;
+                border-right: none;
+                border-bottom: none;
+                font-size: 12px;
+                letter-spacing: 2px;
+                color:rgba(0,0,0,0.7);
+            }
+            form {
+                p {
+                    margin-bottom: 0px;
+                    // font-size: 12px;
+                    ::-webkit-input-placeholder {
+                        font-family: 'Copperplate Light', $body-font-family;
+                        font-size: 10px;
+                        letter-spacing: 3px;
+                        text-transform: none;
+                    }
+                }
+            }
+            textarea {
+                padding-top: 15px;
+                height: 100px;
+                border-bottom: 2px solid rgba(128, 130, 132, 0.2);
+            }
+            input[type="submit"] {
+                font-family: 'Monsieur La Doulaise', $body-font-family;
+                font-size: 36px;
+                color: rgba(128, 130, 132, 1);
+                height: 82px;
+                letter-spacing: 0;
+                border: none;
+                padding-top: 18px;
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
     }
+    // .wpcf7-form-control-wrap {
+    //     ::-webkit-input-placeholder {
+    //         text-transform: uppercase;
+    //     }
+    // }
 }
