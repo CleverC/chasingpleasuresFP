@@ -27,7 +27,8 @@
                         ?>
                         <?php the_content();?>
                         <?php endwhile; wp_reset_query(); ?>
-                        <a class="cc_qbtn" href="#" class="button">next</a>
+                        <!-- <a class="cc_qbtn" href="#" class="button">next</a> -->
+                        <button type="button" class="cc_qbtn" onclick="displayNextImage()">next</button>
                     </div>
 
                 </div>

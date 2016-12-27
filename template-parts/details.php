@@ -1,4 +1,4 @@
-<div class="cc_detailsContainer">
+<div class="cc_detailsContainer" id="ccDs">
     <div class="cc_detailsContainer2 row large-collapse align-middle">
         <div class="cc_border_1b row expanded align-middle">
             <div class="cc_border_2b row expanded align-middle">

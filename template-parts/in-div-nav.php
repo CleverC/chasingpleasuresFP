@@ -1,5 +1,5 @@
-		<div class="cc_indivNav">
-		<div class="cc_indivnavrow row align-middle">
+		<div class="cc_heroRow1C">
+		<div class="cc_heroRow1C2 row align-middle">
 			<div class="top-bar-left">
 				<?php foundationpress_top_bar_l(); ?>
 

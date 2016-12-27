@@ -43,16 +43,16 @@
             }
             .cc_quotesRight {
                 text-align: center;
-                position:relative;
+                position: relative;
                 .cc_qp {
                     text-align: justify;
-                    padding-bottom: 22px;
-                    padding-left: 80px;
-                    padding-right: 80px;
+                    padding: 40px 80px 22px 80px;
                 }
                 .cc_topTtxt {
-                    position: relative;
+                    position: absolute;
                     left: 50%;
+                    width: 100%;
+                    top: 0;
                     transform: translateX(-50%);
                     p {
                         font-size: 100px;
@@ -60,44 +60,55 @@
                         font-family: 'bodega script';
                         font-weight: 400;
                         text-shadow: 0 0 #000;
-                        height: 113px;
+                        height: 96px;
+                        margin-bottom: 0;
+                        position: absolute;
                     }
                 }
                 .cc_subTtxt {
                     position: absolute;
                     left: 50%;
                     transform: translateX(-50%);
-                    top: 60px;
+                    top: 10px;
                     z-index: 2;
                 }
                 .cc_subHdiv {
                     position: relative;
+                    top: 80px;
                 }
-            }
-            .cc_border_6 {
-                border: $cc_border;
-                width: 45%;
-                margin: 0 auto;
-            }
-            .cc_qsubH {
-                padding-bottom: 22px;
-            }
-            .cc_qbq {
-                padding-top: 36px;
-                padding-bottom: 20px;
-                margin: 0 auto;
-                font-family: 'Copperplate Light', $body-font-family;
-                font-size: 12px;
-                text-transform: uppercase;
-            }
-            .cc_qbtn {
-                font-family: 'Monsieur La Doulaise', $body-font-family;
-                font-size: 36px;
-                color: rgba(128, 130, 132, 1);
+                .cc_qparadiv {
+                    position: relative;
+                    top: 55px;
+                }
+                .cc_border_6 {
+                    border: $cc_border;
+                    width: 45%;
+                    margin: 0 auto;
+                    top: 48px;
+                    position: relative;
+                }
+                .cc_qsubH {
+                    padding-bottom: 22px;
+                }
+                .cc_qbq {
+                    padding-top: 88px;
+                    padding-bottom: 20px;
+                    margin: 0 auto;
+                    font-family: 'Copperplate Light', $body-font-family;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                }
+                .cc_qbtn {
+                    font-family: 'Monsieur La Doulaise', $body-font-family;
+                    font-size: 36px;
+                    color: rgba(128, 130, 132, 1);
+                    text-shadow: 1px 6px 10px rgba(#000000, 0.3);
+                    &:hover {
+                        text-shadow: 1px 6px 10px rgba(#000000, 0.7);
+                        cursor:pointer;
+                    }
+                }
             }
         }
     }
 }
-
-
-

@@ -28,12 +28,15 @@
             border-top: 1px solid rgba(128, 130, 132, 0.4);
             padding-top: 6px;
             .cc_sitebyCol {
-                padding:12px 18px 10px 10px;
+                padding: 12px 18px 10px 10px;
                 #cc_sitebyLink {
                     margin: 0;
                     text-transform: uppercase;
                     font-size: 10px;
                     color: rgba(128, 130, 132, 1);
+                    &:hover{
+                        text-shadow: 1px 6px 10px rgba(#000000, 0.7);
+                    }
                 }
                 .cc_copyR {
                     @extend #cc_sitebyLink;
@@ -44,7 +47,7 @@
                     }
                     .cc_copylinkClass {
                         margin-bottom: 0px;
-                        font-size:12px;
+                        font-size: 12px;
                     }
                 }
             }
@@ -56,9 +59,11 @@
                     font-family: 'Monsieur La Doulaise', $body-font-family;
                     font-size: 34px;
                     font-weight: 100;
-                    color: rgba(128, 130, 132, 1);
+                    color: #990000;
                     line-height: 0;
-                    // text-shadow: 1px 6px 10px rgba(#000, 1.2);
+                        &:hover{
+                            text-shadow: 1px 6px 6px rgba(#000000, 0.7);
+                    }
                 }
                 .cc_subfooterhome {
                     font-family: 'Crimson Text', $body-font-family;
@@ -68,7 +73,6 @@
                     text-transform: uppercase;
                     color: rgba(128, 130, 132, 1);
                     text-shadow: 1px 6px 10px rgba(#000000, 0.3);
-                    // text-shadow: 1px 6px 10px rgba(#000, 1.2);
                 }
             }
             .cc_social-holder {
@@ -90,6 +94,9 @@
                     a {
                         padding: 10px;
                         color: rgba(128, 130, 132, 1);
+                        &:hover {
+                            text-shadow: 1px 1px 31px rgba(#000000, 1);
+                        }
                     }
                 }
             }

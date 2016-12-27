@@ -1,4 +1,4 @@
-<section class="cc_aboutContainer">
+<section class="cc_aboutContainer" id="ccSas">
     <div class="cc_aboutContainer2 row large-collapse align-middle">
         <div class="medium-12 cc_aboutcontainerCol">
             <div class="cc_border_1 row align-middle">

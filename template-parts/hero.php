@@ -1,14 +1,14 @@
 <header id="cc_heroContainer" role="banner">
-    <div class="cc_menuContainer row large-collapse align-middle">
+    <div class="cc_heroContainer2 row large-collapse align-middle">
             <div class="cc_border_1 row align-middle">
                 <div class="cc_border_2 row align-middle">
                     <!-- WORDPRESS MENU -->
                     <?php get_template_part('template-parts/in-div-nav'); ?>
                     <!-- WORDPRESS MENU END -->
                     <!-- GALLERY ROW -->
-                    <div class="cc_mainmenuRow row">
-                        <div class="medium-4 columns small-12 large-expand cc_portraitsCol">
-                            <a href="#" class="cc_portraitsImg">
+                    <div class="cc_heroRow2 row">
+                        <div class="medium-4 columns small-12 large-expand cc_1stCol">
+                            <a href="#" class="cc_1stcolImg">
                                 <?php
                                     $args= array(
                                     'page_id' => 18,
@@ -23,8 +23,11 @@
                                     </div>
                             </a>
                         </div>
-                        <div class="medium-4 columns small-12 large-expand cc_weddingsCol">
-                            <a href="#" class="cc_weddingsImg">
+                        <div class="medium-4 columns small-12 large-expand cc_2ndCol">
+                        <div class="slideshow-block">
+                        
+                            <a href="#" class="cc_2ndcolImg link"></a>
+                            <ul class="slides">
                                 <?php
                                     $args= array(
                                     'page_id' => 21,
@@ -34,13 +37,16 @@
                                 ?>
                                     <?php the_content();?>
                                     <?php endwhile; wp_reset_query(); ?>
-                                    <div class="bwpb-overlay row align-middle align-center">
+
+                                    </ul>
+                            
+                                                            <div class="bwpb-overlay row align-middle align-center">
                                         <h5 class="cc_weddingsTexth">Weddings</h5>
                                     </div>
-                            </a>
+                    </div>
                         </div>
-                        <div class="medium-4 columns small-12 large-expand cc_familyCol">
-                            <a href="#" class="cc_familyImg">
+                        <div class="medium-4 columns small-12 large-expand cc_3rdCol">
+                            <a href="#" class="cc_3rdcolImg">
                                 <?php
                                     $args= array(
                                     'page_id' => 23,
@@ -57,7 +63,7 @@
                         </div>
                     </div>
                     <!-- BOTTOM LINKS/SOCIAL MEDIA HOLDER -->
-                    <div class="cc_border_5 row align-middle align-center">
+                    <div class="cc_heroRow3 row align-middle align-center">
                         <div class="medium-3 column cc_welcomeText">
                             <h2 class="cc_Welcome">welcome</h2>
                         </div>

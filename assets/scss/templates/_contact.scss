@@ -106,17 +106,14 @@
                 color: rgba(128, 130, 132, 1);
                 height: 82px;
                 letter-spacing: 0;
+                text-shadow: 1px 6px 10px rgba(#000000, 0.3);
                 border: none;
                 padding-top: 18px;
                 &:hover {
                     cursor: pointer;
+                    text-shadow: 1px 6px 10px rgba(#000000, 0.7);
                 }
             }
         }
     }
-    // .wpcf7-form-control-wrap {
-    //     ::-webkit-input-placeholder {
-    //         text-transform: uppercase;
-    //     }
-    // }
 }

@@ -38,7 +38,7 @@
                 </div>
                 <div class="cc_sidebar"></div>
                     <div class="medium-3 column cc_social-holder">
-                    	<h4 class="cc_social-holderTitle">socialize</h4>
+                    	<h2 class="cc_social-holderTitle">socialize</h2>
                         <ul class="cc_social-list menu">
                             <li><a href="https://www.instagram.com/chasing_pleasures" title="Instagram" target="_blank"><i class="fa fa-instagram" aria-hidden="true" ></i></a></li>
                             <li><a href="https://www.facebook.com/Chasing-Pleasures-Fine-Art-Photography-535058686581850/" title="Facebook" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -65,5 +65,12 @@
 
 <?php wp_footer(); ?>
 <?php do_action( 'foundationpress_before_closing_body' ); ?>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/javascript/customjs.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/javascript/jquery.cycle.lite.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/javascript/cycle_script.js"></script>
+
+
+
 </body>
 </html>

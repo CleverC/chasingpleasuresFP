@@ -69,11 +69,11 @@
             margin-bottom: 6px;
         }
         .cc_aboutheadertitleRow {
-            text-align: center;
-            // padding-top: 40px;
+            text-align: center;;
             margin-bottom: 0px;
             .cc_asubH {
                 line-height: 3;
+                text-align:center;
             }
             .cc_ap1 {
                 font-family: 'Copperplate Light', $body-font-family;
@@ -121,6 +121,8 @@
         }
         .cc_asubH {
             padding-bottom: 10px;
+            // line-height:3;
+            text-align:center;
         }
         .cc_aboutusparaText {
             text-align: justify;
