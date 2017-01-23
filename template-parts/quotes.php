@@ -3,7 +3,8 @@
         <div class="cc_border_1b row expanded align-middle">
             <div class="cc_border_2b row expanded align-middle align-center">
                 <div class="cc_quotesContainer3 row large-collapse align-center">
-                    <div class="medium-4 column cc_quotesLeft">
+                    <div class="medium-4 small-12 column cc_quotesLeft">
+                        <ul class="slidesQuotes">
                         <?php 
 
                             $args= array(
@@ -14,9 +15,9 @@
                         ?>
                         <?php the_content();?>
                         <?php endwhile; wp_reset_query(); ?>
-
+                    </ul>
                 </div>
-                    <div class="medium-5 column cc_quotesRight">
+                    <div class="medium-5 small-12 column cc_quotesRight">
                         <?php 
 
                             $args= array(
@@ -27,8 +28,7 @@
                         ?>
                         <?php the_content();?>
                         <?php endwhile; wp_reset_query(); ?>
-                        <!-- <a class="cc_qbtn" href="#" class="button">next</a> -->
-                        <button type="button" class="cc_qbtn" onclick="displayNextImage()">next</button>
+                        <a class="cc_qbtn" class="button">next</a>
                     </div>
 
                 </div>

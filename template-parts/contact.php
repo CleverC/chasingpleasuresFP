@@ -4,6 +4,7 @@
             <div class="cc_border_2 cc_rowContactseven row align-middle">
                 <div class="row cc_contactrowrow expanded align-middle align-center">
                     <div class="medium-4 columns" id="cc_contactleft">
+                    <ul class="slidesContact active">
                         <?php
 
                             $args= array(
@@ -14,6 +15,7 @@
                         ?>
                         <?php the_content();?>
                         <?php endwhile; wp_reset_query(); ?>
+                    </ul>
                     </div>
                     <div class="medium-7 columns" id="cc_contactright">
                         <h4 class="cc_contactTitle">say bonjour</h4>

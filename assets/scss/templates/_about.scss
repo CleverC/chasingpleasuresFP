@@ -4,6 +4,7 @@
 .cc_aboutContainer {
     height: 1930px;
     position: relative;
+    overflow: hidden;
     &:before {
         content: '';
         position: absolute;
@@ -33,14 +34,14 @@
                 position: relative;
                 left: 47%;
                 transform: translateX(-50%);
-                p{
-                    font-size:100px;
-                    color:#fff;
+                p {
+                    font-size: 100px;
+                    color: #fff;
                     font-family: 'bodega script';
-                    font-weight:400;
-                    text-shadow:0 0 #000;
-                    height:113px;
-                    margin:0;
+                    font-weight: 400;
+                    // text-shadow:0 0 #000;
+                    height: 113px;
+                    margin: 0;
                 }
             }
             .cc_subTtxt {
@@ -48,10 +49,13 @@
                 left: 50%;
                 transform: translateX(-50%);
                 top: 88px;
-                z-index:2;
+                z-index: 2;
+                h2 {
+                    margin-top: 4px;
+                }
             }
-            .cc_subHdiv{
-                position:relative;
+            .cc_subHdiv {
+                position: relative;
             }
         }
         .cc_border_1 {
@@ -69,11 +73,12 @@
             margin-bottom: 6px;
         }
         .cc_aboutheadertitleRow {
-            text-align: center;;
+            text-align: center;
+            ;
             margin-bottom: 0px;
             .cc_asubH {
                 line-height: 3;
-                text-align:center;
+                text-align: center;
             }
             .cc_ap1 {
                 font-family: 'Copperplate Light', $body-font-family;
@@ -114,6 +119,10 @@
         .cc_aboutmeetRow {
             padding-top: 85px;
             padding-bottom: 120px;
+            width: 100%;
+            h4 {
+                font-size: 26px;
+            }
             .cc_aboutustextTitle {
                 margin: 0 auto;
                 line-height: 2.5;
@@ -121,8 +130,7 @@
         }
         .cc_asubH {
             padding-bottom: 10px;
-            // line-height:3;
-            text-align:center;
+            text-align: center;
         }
         .cc_aboutusparaText {
             text-align: justify;
@@ -132,6 +140,125 @@
             font-family: 'Copperplate Light', $body-font-family;
             font-size: 12px;
             text-transform: uppercase;
+            letter-spacing: 2.5px;
+        }
+    }
+}
+
+//--IE fix for pictures--//
+.post {
+    &__image-container {
+        width: 100%; // the same width and height as for the <img>
+        height: 100%;
+        &.compat-object-fit {
+            position: relative; // for the link fix
+            background-size: cover;
+            background-position: center center;
+            > a {
+                // link fix
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+            .post__featured-image {
+                // hide image if object fit is not supported
+                display: none
+            }
+        }
+    }
+    &__featured-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+
+/************************ABOUT SECTION MEDIA QUERIES*******************
+**********************************************************************/
+
+@include bp-small {
+    .cc_aboutContainer {
+        height: 240vh;
+        .cc_aboutContainer2 {
+            .cc_border_1 {
+                width: 98%;
+                margin-top: 2px;
+            }
+            .cc_border_2 {
+                width: 98%;
+                margin-top: 4px;
+                margin-bottom: 4px;
+                padding: 0px 12px;
+            }
+            h2 {}
+            .cc_abouttxt1stColumn {
+                padding-bottom: 28px;
+                .cc_topTtxt {
+                    height: 53px;
+                    p {}
+                }
+                .cc_subTtxt {
+                    top: 44px;
+                    h2 {}
+                }
+                .cc_subHdiv {}
+                .cc_ap2ndrow {
+                    display: none;
+                }
+            }
+            .cc_aboutheadertitleRow {
+                padding-top: 10px;
+                .cc_asubH {
+                    line-height: 1.5;
+                }
+                .cc_ap1 {
+                    font-size: 8px;
+                    padding-bottom: 0px;
+                    text-align: justify;
+                }
+            }
+            .cc_ap2ndrow,
+            .cc_ptxcol1,
+            .cc_apcol2 {}
+            .cc_aboutimg1Column {
+                height: auto;
+                img {
+                    object-fit: contain;
+                    height: auto;
+                    position: relative;
+                }
+            }
+            .cc_aboutimg2Column {
+                img {
+                    position:relative;
+                    padding-top:20px;
+                    padding-bottom:20px;
+                }
+                .cc_aboutimg2Row{
+                    margin:0px;
+                    p{
+                        margin:0px;
+                    }
+                }
+            }
+            .cc_aboutmeetRow {
+                padding-top: 24px;
+                padding-bottom:0px;
+                .cc_aboutustextTitle {}
+            }
+
+            .cc_aboutusparaText {}
+            .cc_aq {}
+            .cc_abouttextColumn {
+                .cc_abouttext2Row {
+                    .cc_asubH {
+                font-size:14px !important;
+            }
+                }
+            }
         }
     }
 }

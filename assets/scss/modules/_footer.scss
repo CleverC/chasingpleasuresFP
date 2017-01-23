@@ -6,6 +6,7 @@
     width: 100%;
     margin: 0 auto;
     background: rgba(250, 245, 242, 1);
+    margin-top: 0px !important;
     #footer {
         @include grid-row();
         padding: rem-calc(20) 0;
@@ -34,8 +35,8 @@
                     text-transform: uppercase;
                     font-size: 10px;
                     color: rgba(128, 130, 132, 1);
-                    &:hover{
-                        text-shadow: 1px 6px 10px rgba(#000000, 0.7);
+                    &:hover {
+                        text-shadow: 1px 3px 10px rgba(#000000, 0.5);
                     }
                 }
                 .cc_copyR {
@@ -61,8 +62,8 @@
                     font-weight: 100;
                     color: #990000;
                     line-height: 0;
-                        &:hover{
-                            text-shadow: 1px 6px 6px rgba(#000000, 0.7);
+                    &:hover {
+                        text-shadow: $chasingpleasure-shadow;
                     }
                 }
                 .cc_subfooterhome {
@@ -102,4 +103,69 @@
             }
         }
     } //-- end of main row
+} //--end of footer container
+
+//----------------------FOOTER MEDIA QUERIES SECTION------------------//
+
+#footer-container {
+    @include breakpoint(small only) {
+        #footer {
+            .cc_sidebar {
+                display: none;
+            }
+            .cc_border_5 {
+                .cc_sitebyCol {
+                    padding: 0px;
+                    padding-top:10px;
+                }
+                .cc_cpCol {
+                    .cc_middlemenufooter {
+                        padding-top: 0px;
+                    }
+                    .cc_cpfootlink {
+                        font-size: 24px;
+                    }
+                    .cc_subfooterhome {
+                        font-size: 10px;
+                        line-height: 1.7;
+                        letter-spacing: 4.1px;
+                    }
+                }
+                .cc_social-holder {
+                    padding:0px;
+                    a{
+                        color:#808284;
+                        text-transform:uppercase;
+                    }
+                    h2 {
+                        display: none;
+                    }
+                    ul li {
+                        padding: 0px;
+                    }
+                    #cc_sitebyLink,
+                    .cc_copylinkClass{
+                        font-size: 7.6px;
+                        padding-top:10px;
+                        float:left;
+                    }
+                    #cc_sitebyLink {
+                        margin:0px;
+                    }
+                    .cc_copyR {
+                        .cc_copylinkClass {
+                            margin-bottom: 0px;
+                            padding-left: 4px;
+                        }
+                    }
+                    .cc_social-list {
+                        padding-top: 6px;
+                        a {
+                            padding: 4px;
+                        }
+                    }
+                }
+            }
+        } //-- end of main row
+    }
 } //--end of footer container

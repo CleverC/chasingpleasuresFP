@@ -1,11 +1,25 @@
 jQuery(function($){
 
-    // Cycle plugin
+    // Cycle code
     $('.slides').cycle({
         fx:     'fade',
-        speed:   10,
+        speed:   740,
         timeout: 1000
     }).cycle("pause");
+
+    $('.slidesContact').cycle({
+        fx:     'fade',
+        speed:   2900,
+        timeout: 1000
+    }).cycle("resume");
+
+    $('.slidesQuotes').cycle({
+        fx:     'fade',
+        speed:   1000,
+        timeout: 0,
+        next:'.cc_qbtn'
+    });
+
 
     // Pause & play on hover
     $('.slideshow-block').hover(function(){
@@ -13,5 +27,5 @@ jQuery(function($){
     }, function(){
         $(this).find('.slides').removeClass('active').cycle('pause');
     });
-
 });
+

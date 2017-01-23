@@ -8,7 +8,8 @@ get_header(); ?>
     
     <!-- FILLER SECTION -->
     <div class="cc_fillerTextColumn">
-        <div class="cc_fillerTextr row">
+        <div class="cc_fillerTextr row align-center">
+            <div class="cc_fillerCol1 medium-8">
             <?php 
 
                 $args= array(
@@ -21,6 +22,7 @@ get_header(); ?>
                 <?php the_content();?> </p>
             <?php endwhile; wp_reset_query(); 
             ?>
+            </div>
         </div>
     </div>
 
@@ -29,7 +31,8 @@ get_header(); ?>
 
     <!-- FILLER SECTION 2 -->
     <div class="cc_fillerTextColumn2">
-        <div class="cc_fillerTextr2 row">
+        <div class="cc_fillerTextr2 row align-center">
+        <div class="cc_fillerCol2 medium-8">
             <?php 
 
                 $args= array(
@@ -42,6 +45,7 @@ get_header(); ?>
                 <?php the_content();?> </p>
             <?php endwhile; wp_reset_query(); 
                 ?>
+                </div>
         </div>
     </div>
 
@@ -50,7 +54,8 @@ get_header(); ?>
     
     <!-- FILLER SECTION 3 -->
     <div class="cc_fillerTextColumn3">
-        <div class="cc_fillerTextr3 row">
+        <div class="cc_fillerTextr3 row align-center">
+        <div class="cc_fillerCol3 medium-8">
             <?php 
 
                 $args= array(
@@ -63,6 +68,7 @@ get_header(); ?>
                 <?php the_content();?> </p>
             <?php endwhile; wp_reset_query(); 
                 ?>
+                </div>
         </div>
     </div>
 
@@ -72,7 +78,8 @@ get_header(); ?>
 
     <!-- FILLER SECTION 4 -->
     <div class="cc_fillerTextColumn4">
-        <div class="cc_fillerTextr4 row">
+        <div class="cc_fillerTextr4 row align-center">
+        <div class="cc_fillerCol4 medium-12">
             <?php 
 
                 $args= array(
@@ -81,10 +88,11 @@ get_header(); ?>
                 $query = new WP_Query($args);
                 while($query->have_posts()) : $query->the_post();
                 ?>
-            <p>
+            <p id="ccfl4">
                 <?php the_content();?> </p>
             <?php endwhile; wp_reset_query(); 
                 ?>
+                </div>
         </div>
     </div>
 
@@ -98,7 +106,5 @@ get_header(); ?>
     <?php do_action( 'foundationpress_after_content' ); ?>
     <!-- Contact Section -->
     <!-- Page Top Arrow -->
-    <div class="cc_arrowContainer page-scroll">
-        <a id="toTop" class="scrollicon" href="#masthead" style="opacity: 0; visibility: hidden;"><i class="fa fa-angle-up"></i></a>
-    </div>
+    <?php get_template_part('template-parts/uparrow'); ?>
     <?php get_footer();

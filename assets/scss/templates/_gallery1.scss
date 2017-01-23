@@ -1,0 +1,206 @@
+/************************GALLERY1 SECTION*********************************
+**********************************************************************/
+
+body {
+    h2 {
+        font-family: 'Monsieur La Doulaise', $body-font-family;
+    }
+    h4 {
+        font-family: 'Cinzel', $body-font-family;
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+        color: #990000;
+    }
+    h5 {
+        margin-bottom: 0;
+    }
+}
+
+
+.cc_galleryContainer {
+    height: auto;
+    position: relative;
+    padding-bottom: 200px;
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        opacity: 0.5;
+        background: url("../images/orangephotographie_details_0007.jpg") no-repeat center center;
+        background-size: cover;
+    }
+    .cc_galleryContainer2 {
+        top: 91px;
+        width: 100%;
+        background-color: $main-bk-color;
+        position: relative;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        .cc_border_1 {
+            border: $cc_border;
+            width: 99%;
+            margin: 0 auto;
+            margin-top: 6px;
+            margin-bottom: 6px;
+        }
+        .cc_border_2 {
+            border: $cc_border;
+            width: 99%;
+            margin: 0 auto;
+            margin-top: 6px;
+            margin-bottom: 6px;
+        }
+        a {
+            color: rgba(128, 130, 132, 1);
+            &:hover {
+                text-shadow: 1px 6px 10px rgba(#000000, 0.7);
+            }
+        }
+        //----GALLERY NAV ROW ----//
+        .cc_galleryNavRow1C {
+            display: inherit;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            .top-bar-left,
+            .top-bar-right,
+            {
+                font-family: 'Copperplate Light', $body-font-family;
+                font-size: 12px;
+                letter-spacing: 4px;
+                text-transform: uppercase;
+                text-shadow: 1px 6px 10px rgba(#000000, 0.3);
+                position:relative;
+                padding-bottom:26px;
+            }
+            .top-bar-center {
+                font-family: 'Monsieur La Doulaise', $body-font-family;
+                font-size: 42px;
+                font-weight: 100;
+                padding-left: 20px;
+                padding-right: 20px;
+                .home a {
+                    color: #990000;
+                    &:hover {
+                        text-shadow: $chasingpleasure-shadow;
+                    }
+                }
+                .cc_subtextPleasures {
+                    font-family: 'Cinzel', $body-font-family;
+                    font-size: 20px;
+                    letter-spacing: 5px;
+                    line-height: 1.2;
+                    text-shadow: 1px 6px 10px rgba(#000000, 0.3);
+                }
+            }
+            .cc_gallerytopnavl,
+            .cc_gallerytopnavr{
+                position:absolute;
+                top:22px;
+            }
+
+            .cc_gallerytopnavl{
+                padding-right:100px;
+            }
+            .cc_gallerytopnavr{
+                padding-left:100px;
+            }
+            .cc_imgTitlel,
+            .cc_imgTitler {
+                height: 56px;
+                width: 200px;
+            }
+        }
+    }
+}
+
+
+/************************LEFT ARROW PAGE NEXT ICON*************************
+**********************************************************************/
+
+#toLeft {
+    width: 44px;
+    background: rgba(250, 245, 242, 1);
+    text-align: center;
+    text-shadow:none;
+    padding: 20px 10px 20px 10px;
+    position: fixed;
+    bottom: 330px;
+    left: 150px;
+    cursor: pointer;
+    transition: color 300ms, background-color 300ms, opacity 300ms;
+    -moz-transition: color 300ms, background-color 300ms, opacity 300ms;
+    -o-transition: color 300ms, background-color 300ms, opacity 300ms;
+    -webkit-transition: color 300ms, background-color 300ms, opacity 300ms;
+    z-index: 9;
+    border-radius: 5px;
+    display: block;
+    border: 1px solid rgba(128, 130, 132, 0.6);
+}
+
+#toLeft i {
+    color: rgba(128, 130, 132, 1);
+    font-size: 1.5em;
+}
+
+#toLeft:hover {
+    opacity: 0.78 !important;
+}
+
+//-----------TO TOP ARROW MEDIA QUERIES----------//
+#toLeft {
+    @include breakpoint(small only) {
+        padding: 4px;
+        width: 34px;
+        bottom: 88px;
+        opacity: 0.30 !important;
+    }
+}
+
+
+/************************RIGHT ARROW PAGE NEXT ICON*************************
+**********************************************************************/
+
+#toRight {
+    width: 44px;
+    background: rgba(250, 245, 242, 1);
+    text-align: center;
+    text-shadow:none;
+    padding: 20px 10px 20px 10px;
+    position: fixed;
+    bottom: 330px;
+    right: 150px;
+    cursor: pointer;
+    transition: color 300ms, background-color 300ms, opacity 300ms;
+    -moz-transition: color 300ms, background-color 300ms, opacity 300ms;
+    -o-transition: color 300ms, background-color 300ms, opacity 300ms;
+    -webkit-transition: color 300ms, background-color 300ms, opacity 300ms;
+    z-index: 9;
+    border-radius: 5px;
+    display: block;
+    border: 1px solid rgba(128, 130, 132, 0.6);
+}
+
+#toRight i {
+    color: rgba(128, 130, 132, 1);
+    font-size: 1.5em;
+}
+
+#toRight:hover {
+    opacity: 0.78 !important;
+}
+
+//-----------TO TOP ARROW MEDIA QUERIES----------//
+#toRight {
+    @include breakpoint(small only) {
+        padding: 4px;
+        width: 34px;
+        bottom: 88px;
+        opacity: 0.30 !important;
+    }
+}

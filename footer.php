@@ -14,8 +14,8 @@
 		<div id="footer-container">
 			<footer id="footer">
 			  <div class="cc_border_5 row align-middle align-center">
-				<div class="medium-3 column cc_sitebyCol">
-				<a href="http://www.clevercampbell.com" target="_blank"><p id="cc_sitebyLink">Site Designed &amp; Developed by Clever Campbell</p></a>
+				<div class="medium-3 small-12 column cc_sitebyCol">
+				<a href="http://www.clevercampbell.com" target="_blank" class="cc_sitebyclassLink"><p id="cc_sitebyLink">Site Designed &amp; Developed by Clever Campbell |</p></a>
 					<div class="cc_copyR">
 						<a href="<?php echo home_url(); ?>">
         					<p class="cc_copylinkClass"> &copy;&nbsp;<?php echo date('Y');?>
@@ -24,7 +24,7 @@
 					</div>
 					</div>
 					<div class="cc_sidebar"></div>
-				<div class="medium-5 column cc_cpCol">
+				<div class="medium-5 small-12 column cc_cpCol">
 					<ul class="cc_middlemenufooter">
                         <li class="home">
                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="cc_cpfootlink" rel="home">
@@ -37,7 +37,7 @@
                     </ul>
                 </div>
                 <div class="cc_sidebar"></div>
-                    <div class="medium-3 column cc_social-holder">
+                    <div class="medium-3 small-12 column cc_social-holder">
                     	<h2 class="cc_social-holderTitle">socialize</h2>
                         <ul class="cc_social-list menu">
                             <li><a href="https://www.instagram.com/chasing_pleasures" title="Instagram" target="_blank"><i class="fa fa-instagram" aria-hidden="true" ></i></a></li>
@@ -65,7 +65,8 @@
 
 <?php wp_footer(); ?>
 <?php do_action( 'foundationpress_before_closing_body' ); ?>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/javascript/modernizr.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/javascript/customjs.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/javascript/jquery.cycle.lite.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/javascript/cycle_script.js"></script>

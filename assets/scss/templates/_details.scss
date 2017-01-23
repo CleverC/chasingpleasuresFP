@@ -30,16 +30,24 @@
             margin: 0 auto;
         }
         .cc_detailsContainer3 {
-            margin: 0 auto;
-            position: absolute;
-            .cc_detailsimgRow {
-                padding-bottom: 42px;
+            margin: 0;
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            .cc_detailsleft,
+            .cc_detailsright {
+                @include vertical-align();
+            }
+            .cc_sidebar {
+                @include vertical-align();
+                float: left;
             }
             .cc_detailsimgleft,
             .cc_detailsimgright {
                 position: relative;
                 height: 420px;
                 overflow: hidden;
+                max-width: 50%;
                 img {
                     object-fit: cover;
                     position: absolute;
@@ -77,7 +85,7 @@
             }
             .cc_detailsright {
                 padding-left: 60px;
-                padding-bottom:90px;
+                padding-bottom: 80px;
                 .cc_topTtxt {
                     position: relative;
                     left: 50%;
@@ -87,7 +95,7 @@
                         color: #fff;
                         font-family: 'bodega script';
                         font-weight: 400;
-                        text-shadow: 0 0 #000;
+                        // text-shadow: 0 0 #000;
                         height: 130px;
                         margin: 0;
                     }
@@ -98,10 +106,31 @@
                     transform: translateX(-50%);
                     top: 128px;
                     z-index: 2;
-                    height:65px;
+                    height: 65px;
                 }
                 .cc_subHdiv {
                     position: relative;
+                }
+                .cc_detailsimgRow {
+                    padding-bottom: 48px;
+                }
+                .cc_detailsrtxt2Row {
+                    margin-bottom: 50px;
+                    p {
+                        text-align: justify;
+                    }
+                }
+                .cc_detailsheadertitleRow {
+                    margin: 0 auto;
+                    text-align: center;
+                    h5 {
+                        font-family: 'Copperplate Light', $body-font-family;
+                        font-size: 12px;
+                        text-transform: uppercase;
+                        letter-spacing: 4px;
+                        margin-bottom: 30px;
+                        margin-top: 16px;
+                    }
                 }
             }
         }
@@ -110,22 +139,59 @@
             width: 76%;
             margin: 0 auto;
         }
-        .cc_detailsheadertitleRow {
-            margin: 0 auto;
-            text-align: center;
-            h5 {
-                font-family: 'Copperplate Light', $body-font-family;
-                font-size: 12px;
-                text-transform: uppercase;
-                letter-spacing: 4px;
-                margin-bottom: 30px;
-                margin-top: 16px;
+    }
+}
+
+
+/************************DETAILS SECTION MEDIA QUERIES*****************
+**********************************************************************/
+
+@include bp-small {
+    .cc_detailsContainer {
+        height:715px;
+        .cc_sidebar {}
+        .cc_detailsContainer2 {
+            .cc_border_1b {}
+            .cc_border_2b {
+                height:99%;
             }
-        }
-        .cc_detailsrtxt2Row {
-            p {
-                text-align: justify;
+            .cc_detailsContainer3 {
+                .cc_sidebar {
+                    display: none;
+                }
+                .cc_detailsleft,
+                .cc_detailsright {}
+                .cc_sidebar {}
+                .cc_detailsimgleft,
+                .cc_detailsimgright {
+                    img {}
+                }
+                .cc_detailsleft {
+                    padding: 20px;
+                    p {}
+                    h5 {}
+                    .cc_fixpp {}
+                    .cc_fixppa {}
+                    .cc_fixh5 {}
+                    .cc_fixpara {}
+                }
+                .cc_detailsright {
+                    display: none;
+                    .cc_topTtxt {
+                        p {}
+                    }
+                    .cc_subTtxt {}
+                    .cc_subHdiv {}
+                    .cc_detailsimgRow {}
+                    .cc_detailsrtxt2Row {
+                        p {}
+                    }
+                    .cc_detailsheadertitleRow {
+                        h5 {}
+                    }
+                }
             }
+            .cc_border_6 {}
         }
     }
 }

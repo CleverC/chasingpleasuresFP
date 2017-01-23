@@ -5,6 +5,7 @@
     height: 690px;
     width: 100%;
     background: $main-bk-color;
+    overflow: hidden;
     .cc_quotesContainer2 {
         max-width: 100%;
         height: 100%;
@@ -28,6 +29,7 @@
         .cc_quotesContainer3 {
             height: 75%;
             margin: 0 auto;
+            display: inline-block;
             .cc_quotesLeft {
                 position: relative;
                 height: 100%;
@@ -37,13 +39,30 @@
                 img {
                     object-fit: contain;
                     position: absolute;
-                    height: 100%;
                     width: 100%;
+                }
+                li {
+                    display: none;
+                }
+                #first {
+                    display: block;
                 }
             }
             .cc_quotesRight {
                 text-align: center;
                 position: relative;
+                .cc_qqbq {
+                    ul {
+                        margin: 0 auto;
+                        list-style-type: none;
+                        li {
+                            display: none;
+                        }
+                        #first {
+                            display: block;
+                        }
+                    }
+                }
                 .cc_qp {
                     text-align: justify;
                     padding: 40px 80px 22px 80px;
@@ -59,10 +78,12 @@
                         color: #fff;
                         font-family: 'bodega script';
                         font-weight: 400;
-                        text-shadow: 0 0 #000;
+                        // text-shadow: 0 0 #000;
                         height: 96px;
+                        width: 100%;
                         margin-bottom: 0;
                         position: absolute;
+                        line-height: 72px;
                     }
                 }
                 .cc_subTtxt {
@@ -71,27 +92,64 @@
                     transform: translateX(-50%);
                     top: 10px;
                     z-index: 2;
+                    h2 {
+                        margin-top: 4px;
+                    }
                 }
                 .cc_subHdiv {
                     position: relative;
                     top: 80px;
+                    ul {
+                        position: absolute;
+                        list-style-type: none;
+                        margin: 0;
+                        width: 100%;
+                        li {
+                            display: none;
+                        }
+                        #first {
+                            display: block;
+                        }
+                    }
                 }
                 .cc_qparadiv {
                     position: relative;
-                    top: 55px;
+                    // top: 55px;
+                    top: 90px;
                 }
                 .cc_border_6 {
                     border: $cc_border;
                     width: 45%;
                     margin: 0 auto;
-                    top: 48px;
+                    top: 96px;
                     position: relative;
                 }
                 .cc_qsubH {
                     padding-bottom: 22px;
+                    // font-size: 28px;
+                }
+                .cc_qqbq {
+                    position: relative;
+                    ul {
+                        position: absolute;
+                        list-style-type: none;
+                        margin: 0;
+                        width: 100%;
+                        li {
+                            display: none;
+                            p {
+                                padding-left: 70px;
+                                padding-right: 70px;
+                                letter-spacing: 2.5px;
+                            }
+                        }
+                        #first {
+                            display: block;
+                        }
+                    }
                 }
                 .cc_qbq {
-                    padding-top: 88px;
+                    padding-top: 142px;
                     padding-bottom: 20px;
                     margin: 0 auto;
                     font-family: 'Copperplate Light', $body-font-family;
@@ -100,15 +158,92 @@
                 }
                 .cc_qbtn {
                     font-family: 'Monsieur La Doulaise', $body-font-family;
-                    font-size: 36px;
+                    font-size: 38px;
                     color: rgba(128, 130, 132, 1);
                     text-shadow: 1px 6px 10px rgba(#000000, 0.3);
+                    top: 190px;
+                    position: relative;
                     &:hover {
                         text-shadow: 1px 6px 10px rgba(#000000, 0.7);
-                        cursor:pointer;
+                        cursor: pointer;
                     }
                 }
             }
         }
     }
 }
+
+
+/************************QUOTES SECTION MEDIA QUERIES*****************
+**********************************************************************/
+.cc_quotesContainer {
+@include breakpoint(small only) {
+    
+        .cc_quotesContainer2 {
+            .cc_border_1b {}
+            .cc_border_2b {
+                height:98.8%;
+            }
+            .cc_quotesContainer3 {
+                .cc_quotesLeft {
+                    margin:0px;
+                    height:200px;
+                    ul{
+                        margin:0px;
+                    }
+                    img {}
+                    li {}
+                    #first {}
+                }
+                .cc_quotesRight {
+                    .cc_qqbq {
+                        ul {
+                            li {
+                                p{
+                                    font-size:8px;
+                                    padding:10px;
+                                }
+                            }
+                            #first {}
+                        }
+                    }
+                    .cc_qp {
+                        padding:20px;
+                    }
+                    .cc_topTtxt {
+                        p {}
+                    }
+                    .cc_subTtxt {
+                        h2 {}
+                    }
+                    .cc_subHdiv {
+                        ul {
+                            li {}
+                            #first {}
+                        }
+                    }
+                    .cc_qparadiv {}
+                    .cc_border_6 {}
+                    .cc_qsubH {
+                        padding-bottom:0px;
+                    }
+                    .cc_qqbq {
+                        top:130px;
+                        ul {
+                            li {
+                                p {}
+                            }
+                            #first {}
+                        }
+                    }
+                    .cc_qbq {}
+                    .cc_qbtn {
+                        display:none;
+                        &:hover {}
+                    }
+                }
+            }
+        }
+    }
+}
+

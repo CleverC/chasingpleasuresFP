@@ -63,7 +63,7 @@ $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
 $black: #0a0a0a;
 $white: #fefefe;
-$outer-space: #2c3840;
+$outer-space: transparent;
 $body-background: $white;
 $body-font-color: rgba(128, 130, 132, 1);
 $body-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -85,12 +85,13 @@ $print-transparent-backgrounds: true;
 $breakpoints: (
   small: 0,
   medium: 640px,
-  large: 1024px,
-  xlarge: 1200px,
+  large: 768px,
+  xlarge: 780px,
   xxlarge: 1440px,
+  special:360px,
 );
 $print-breakpoint: large;
-$breakpoint-classes: (small medium large);
+$breakpoint-classes: (small medium large special);
 
 // 3. The Grid
 // -----------
@@ -117,17 +118,18 @@ $header-margin-bottom: 0.5rem;
 $header-styles: (
   small: (
     'h1': ('font-size': 24),
-    'h2': ('font-size': 20),
+    'h2': ('font-size': 30),
     'h3': ('font-size': 19),
-    'h4': ('font-size': 18),
+    'h4': ('font-size': 16),
     'h5': ('font-size': 17),
     'h6': ('font-size': 16),
+    'p':('font-size':12),
   ),
   medium: (
     'h1': ('font-size': 48),
     'h2': ('font-size': 38),
     'h3': ('font-size': 31),
-    'h4': ('font-size': 24),
+    'h4': ('font-size': 28),
     'h5': ('font-size': 20),
     'h6': ('font-size': 16),
   ),
@@ -627,6 +629,7 @@ $topbar-unstack-breakpoint: medium;
 $cc_border: 1px solid rgba(128, 130, 132, 0.4);
 $main-bk-color: rgba(250, 245, 242, 1);
 $subH-font-size: 22px;
+$chasingpleasure-shadow:1px 6px 6px rgba(#000000, 0.4);
 
 
 // 39. My Mixins
@@ -643,3 +646,105 @@ $subH-font-size: 22px;
       transition: $transition;
 }
 
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+// 38. My Media Mixins
+// ----------------
+// @mixin bp-small {
+//     @media (max-width: 451px) {
+//         @content;
+//     }
+// }
+
+/*-- New Set --*/
+
+@mixin bp-small {
+    @media (min-width: 320px) and (max-width: 568px) {
+        @content;
+    }
+}
+
+//changed from original for this project
+@mixin bp-medium {
+    @media (min-width: 360px) and (max-width: 598px) {
+        @content;
+    }
+}
+
+@mixin bp-medium-isixpls {
+    @media (min-width: 412px) and (max-width: 598px) {
+        @content;
+    }
+}
+
+@mixin bp-large {
+    @media (min-width: 599px) and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin bp-xlarge-ipad {
+    @media (min-width: 768px) and (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin bp-xlarge-ipadhd {
+    @media (min-width: 768px) and (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin bp-xlarge-ipadpro {
+    @media (min-width: 1024px) and (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin bp-xxlarge {
+    @media (min-width: 992px) and (max-width: 1199px) {
+        @content;
+    }
+}
+
+@mixin bp-xxxlarge {
+    @media (min-width: 1600px) and (max-width: 1920px) {
+        @content;
+    }
+}
+
+
+/*-------------lap tops ----------*/
+
+
+/* ----------- Non-Retina Screens ----------- */
+
+@mixin bp-xxlargenohd {
+    @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) 
+    and (-webkit-min-device-pixel-ratio: 1) {
+        @content;
+    }
+}
+
+
+/* ----------- Retina Screens ----------- */
+
+@mixin bp-xxlargehd {
+    @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) 
+    and (-webkit-min-device-pixel-ratio: 2) 
+    and (min-resolution: 192dpi) {
+        @content;
+    }
+}
+
+@mixin bp-special-ipadmini {
+  @media (min-width: 600px) and (max-height: 800px) {
+    @content;
+  }
+}

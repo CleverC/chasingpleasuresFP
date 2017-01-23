@@ -1104,7 +1104,7 @@ $.fn.cycle.transitions.fadeout = function($cont, $slides, opts) {
         $(next).css('zIndex',opts.slideCount + (rev !== true ? 0 : 1));
     });
     opts.animIn.opacity = 1;
-    opts.animOut.opacity = 0;
+    opts.animOut.opacity = 1;
     opts.cssBefore.opacity = 1;
     opts.cssBefore.display = 'block';
     opts.cssAfter.zIndex = 0;

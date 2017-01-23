@@ -40,28 +40,40 @@ $(document).scroll(function(){
     });
 }
 
-//--Change Hero Image every three seconds--//
-// Look in cycle_script.js.
+//--Remove titile attribute--//
+
+$("a").mouseover(function(){
+    $("a").removeAttr("title");
+});
+
+//Flips Social Media/Copy/siteby info section for mobile 
+
+ var $iW = $(window).width();
+  if ($iW < 415){
+     $('.cc_copyR').insertAfter('.cc_social-list');
+     $('.cc_sitebyclassLink').insertAfter('.cc_social-list');
+  }
 
 
+//--IE Fix picutes ie--//
 
+function addClass(el, className) {
+    if (el.classList) el.classList.add(className);
+    else if (!hasClass(el, className)) el.className += ' ' + className;
+}
 
-// function displayNextImage() {
-//               x = (x === images.length - 1) ? 0 : x + 1;
-//               document.getElementById("img").src = images[x];
-//           }
+var imgContainers, len;
 
-//           function displayPreviousImage() {
-//               x = (x <= 0) ? images.length - 1 : x - 1;
-//               document.getElementById("img").src = images[x];
-//           }
+if (!Modernizr.objectfit) {
+    imgContainers = document.querySelectorAll('.post__image-container');
+    len = imgContainers.length;
 
-//           function startTimer() {
-//               setInterval(displayNextImage, 3000);
-//           }
-
-//           var images = [], x = -1;
-//           images[0] = "_n.jpg.jpg";
-//           images[1] = "sdf.jpg.jpg";
-//           images[2] = "pregnant.jpg";
-
+    for (var i=0; i<len; i++) {
+        var $container = imgContainers[i],
+                imgUrl = $container.querySelector('img').getAttribute('src');
+        if (imgUrl) {
+            $container.style.backgroundImage = 'url(' + imgUrl + ')';
+            addClass($container, 'compat-object-fit');
+        }
+    }
+}
