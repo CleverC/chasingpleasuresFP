@@ -17,6 +17,7 @@ body {
 }
 
 
+
 .cc_galleryContainer {
     height: auto;
     position: relative;
@@ -49,10 +50,10 @@ body {
         }
         .cc_border_2 {
             border: $cc_border;
-            width: 99%;
+            width: 99.3%;
             margin: 0 auto;
-            margin-top: 6px;
-            margin-bottom: 6px;
+            margin-top: 3.9px;
+            margin-bottom: 3.9px;
         }
         a {
             color: rgba(128, 130, 132, 1);
@@ -75,8 +76,8 @@ body {
                 letter-spacing: 4px;
                 text-transform: uppercase;
                 text-shadow: 1px 6px 10px rgba(#000000, 0.3);
-                position:relative;
-                padding-bottom:26px;
+                position: relative;
+                padding-bottom: 26px;
             }
             .top-bar-center {
                 font-family: 'Monsieur La Doulaise', $body-font-family;
@@ -99,21 +100,112 @@ body {
                 }
             }
             .cc_gallerytopnavl,
-            .cc_gallerytopnavr{
-                position:absolute;
-                top:22px;
+            .cc_gallerytopnavr {
+                position: absolute;
+                top: 22px;
             }
-
-            .cc_gallerytopnavl{
-                padding-right:100px;
+            .cc_gallerytopnavl {
+                padding-right: 100px;
             }
-            .cc_gallerytopnavr{
-                padding-left:100px;
+            .cc_gallerytopnavr {
+                padding-left: 100px;
             }
             .cc_imgTitlel,
             .cc_imgTitler {
                 height: 56px;
                 width: 200px;
+            }
+        }
+    }
+}
+
+
+/************************GALLERY MEDIA QUERIES*******************
+**********************************************************************/
+
+.cc_galleryContainer {
+    padding-bottom: 142px;
+    @include bp-small {
+        .cc_galleryContainer2 {
+            top: 20px;
+            .cc_border_1 {}
+            .cc_border_2 {
+                margin-top: 4px;
+                margin-bottom: 4px;
+                width: 97.7%;
+                .cc_gallerytxtRow {
+                    .vc_row {
+                        .fg-gallery-item {
+                            // height:50px;
+                        }
+                    }
+                }
+            }
+            a {
+                &:hover {}
+            }
+            //----GALLERY NAV ROW ----//
+            .cc_galleryNavRow1C {
+                .top-bar-right,
+                {
+                    #mobile-menu {
+                        display: none;
+                    }
+                }
+                .top-bar-center {
+                    font-size: 30px;
+                    .home a {
+                        &:hover {}
+                    }
+                    .cc_subtextPleasures {
+                        font-size: 12px;
+                    }
+                }
+                .cc_gallerytopnavl,
+                .cc_gallerytopnavr {}
+                .cc_gallerytopnavl {}
+                .cc_gallerytopnavr {}
+                .cc_imgTitlel,
+                .cc_imgTitler {
+                    display: none;
+                    // height: 30px;
+                    // width: 60px;
+                }
+            }
+        }
+    }
+    @include bp-xlarge-ipad {
+        padding-bottom: 172px;
+        .cc_galleryContainer2 {
+            .cc_border_2 {
+                margin-top: 4px;
+                margin-bottom: 4px;
+            }
+            .cc_galleryNavRow1C {
+                .cc_imgTitlel,
+                .cc_imgTitler {
+                    width: 156px;
+                }
+                .cc_gallerytopnavr {
+                    padding-left: 70px;
+                }
+                .top-bar-center {
+                    padding-left: 14px;
+                    padding-right: 0px;
+                }
+            }
+        }
+    }
+    @include bp-xlarge-ipadpro {
+        .cc_galleryContainer2 {
+            .cc_galleryNavRow1C {
+                .cc_imgTitlel,
+                .cc_imgTitler {
+                    width: 227px;
+                }
+                .cc_gallerytopnavr {
+                    padding-left: 122px;
+                }
             }
         }
     }
@@ -127,7 +219,7 @@ body {
     width: 44px;
     background: rgba(250, 245, 242, 1);
     text-align: center;
-    text-shadow:none;
+    text-shadow: none;
     padding: 20px 10px 20px 10px;
     position: fixed;
     bottom: 330px;
@@ -152,13 +244,24 @@ body {
     opacity: 0.78 !important;
 }
 
-//-----------TO TOP ARROW MEDIA QUERIES----------//
+//-----------TO LEFT ARROW MEDIA QUERIES----------//
 #toLeft {
     @include breakpoint(small only) {
         padding: 4px;
-        width: 34px;
-        bottom: 88px;
-        opacity: 0.30 !important;
+        width: 24px;
+        bottom: 215px;
+        opacity: 0.60 !important;
+        left: 4px;
+    }
+    @include bp-xlarge-ipad {
+        left: 26px;
+        bottom: 340px;
+    }
+    @include bp-xlarge-ipadpro {
+        left: 42px;
+    }
+    @include bp-xxxlarge{
+        left: 390px;
     }
 }
 
@@ -170,7 +273,7 @@ body {
     width: 44px;
     background: rgba(250, 245, 242, 1);
     text-align: center;
-    text-shadow:none;
+    text-shadow: none;
     padding: 20px 10px 20px 10px;
     position: fixed;
     bottom: 330px;
@@ -184,6 +287,7 @@ body {
     border-radius: 5px;
     display: block;
     border: 1px solid rgba(128, 130, 132, 0.6);
+    visibility:visible;
 }
 
 #toRight i {
@@ -195,12 +299,23 @@ body {
     opacity: 0.78 !important;
 }
 
-//-----------TO TOP ARROW MEDIA QUERIES----------//
+//-----------TO RIGHT ARROW MEDIA QUERIES----------//
 #toRight {
     @include breakpoint(small only) {
         padding: 4px;
-        width: 34px;
-        bottom: 88px;
-        opacity: 0.30 !important;
+        width: 24px;
+        bottom: 215px;
+        opacity: 0.6 !important;
+        right: 4px;
+    }
+    @include bp-xlarge-ipad {
+        right: 26px;
+        bottom: 340px;
+    }
+    @include bp-xlarge-ipadpro {
+        right: 42px;
+    }
+    @include bp-xxxlarge{
+        right: 390px;
     }
 }

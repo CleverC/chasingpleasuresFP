@@ -63,7 +63,7 @@ $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
 $black: #0a0a0a;
 $white: #fefefe;
-$outer-space: transparent;
+$outer-space: #000;
 $body-background: $white;
 $body-font-color: rgba(128, 130, 132, 1);
 $body-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -593,11 +593,11 @@ $thumbnail-radius: $global-radius;
 // 35. Title Bar
 // -------------
 
-$titlebar-background: $outer-space;
+$titlebar-background: #fff;
 $titlebar-color: $white;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;
-$titlebar-icon-color: $white;
+$titlebar-icon-color: #cacaca;
 $titlebar-icon-color-hover: $medium-gray;
 $titlebar-icon-spacing: 0.25rem;
 
@@ -683,19 +683,7 @@ $chasingpleasure-shadow:1px 6px 6px rgba(#000000, 0.4);
     }
 }
 
-@mixin bp-large {
-    @media (min-width: 599px) and (max-width: 767px) {
-        @content;
-    }
-}
-
 @mixin bp-xlarge-ipad {
-    @media (min-width: 768px) and (max-width: 1024px) {
-        @content;
-    }
-}
-
-@mixin bp-xlarge-ipadhd {
     @media (min-width: 768px) and (max-width: 1024px) {
         @content;
     }

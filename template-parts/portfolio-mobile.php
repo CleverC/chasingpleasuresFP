@@ -1,5 +1,5 @@
                 <div class="cc_heroRow2 row" id="cc_portfoliomobile">
-                    <div class="medium-4 columns small-12 large-expand cc_1stCol">
+                    <div class="medium-4 columns small-12 large-expand cc_1stCol" id="ccSps">
                         <div class="slideshow-block">
             <a href="/chasingpleasuresdev/portraits" class="cc_1stcolImg">
                             <ul class="slides-2">

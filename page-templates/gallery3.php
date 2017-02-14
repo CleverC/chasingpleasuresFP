@@ -2,8 +2,7 @@
 /*
 Template Name: Gallery3
 */
-get_header(); ?>
-    <title>test</title>
+get_header('portfolio'); ?>
     <div class="cc_galleryContainer" id="cc_G1">
         <div class="cc_galleryContainer2 row large-collaspe align-middle">
             <div class="medium-12 columns cc_galleryCol1">
@@ -29,7 +28,7 @@ get_header(); ?>
                         </div>
                         <?php get_template_part('template-parts/in-div-nav-gallery'); ?>
                         <div class="cc_arrow_l_Container">
-    <a id="toLeft" class="scrollicon" href="/chasingpleasuresdev/weddings" style="opacity: 0; visibility: hidden;"><i class="fa fa-caret-left" aria-hidden="true"></i></a>
+    <a id="toLeft" class="scrolliconb" href="/chasingpleasuresdev/weddings" style="opacity: 0; visibility: hidden;"><i class="fa fa-caret-left" aria-hidden="true"></i></a>
 </div>
                     </div><!--END OF CC_BORDER_2-->
                 </div>

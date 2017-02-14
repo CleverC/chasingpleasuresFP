@@ -33,7 +33,7 @@
             .cc_quotesLeft {
                 position: relative;
                 height: 100%;
-                margin-left: 20px;
+                margin-left: 130px;
                 margin-right: 40px;
                 overflow: hidden;
                 img {
@@ -126,7 +126,6 @@
                 }
                 .cc_qsubH {
                     padding-bottom: 22px;
-                    // font-size: 28px;
                 }
                 .cc_qqbq {
                     position: relative;
@@ -176,74 +175,133 @@
 
 /************************QUOTES SECTION MEDIA QUERIES*****************
 **********************************************************************/
+
 .cc_quotesContainer {
-@include breakpoint(small only) {
-    
+    @include breakpoint(small only) {
+        height: 618px;
         .cc_quotesContainer2 {
-            .cc_border_1b {}
             .cc_border_2b {
-                height:98.8%;
+                height: 98.8%;
             }
             .cc_quotesContainer3 {
+                height: 78%;
                 .cc_quotesLeft {
-                    margin:0px;
-                    height:200px;
-                    ul{
-                        margin:0px;
+                    margin: 0px;
+                    height: 200px;
+                    ul {
+                        margin: 0px;
                     }
-                    img {}
-                    li {}
-                    #first {}
                 }
                 .cc_quotesRight {
                     .cc_qqbq {
                         ul {
                             li {
-                                p{
-                                    font-size:8px;
-                                    padding:10px;
+                                p {
+                                    font-size: 8px;
+                                    padding: 10px;
                                 }
                             }
-                            #first {}
                         }
                     }
                     .cc_qp {
-                        padding:20px;
-                    }
-                    .cc_topTtxt {
-                        p {}
-                    }
-                    .cc_subTtxt {
-                        h2 {}
+                        padding: 10px 18px 18px 18px;
                     }
                     .cc_subHdiv {
-                        ul {
-                            li {}
-                            #first {}
-                        }
+                        top: 66px;
                     }
-                    .cc_qparadiv {}
-                    .cc_border_6 {}
                     .cc_qsubH {
-                        padding-bottom:0px;
+                        padding-bottom: 0px;
                     }
                     .cc_qqbq {
-                        top:130px;
-                        ul {
-                            li {
-                                p {}
-                            }
-                            #first {}
+                        top: 130px;
+                    }
+                    .cc_qbtn {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    @include bp-medium {
+        height: 610px;
+        .cc_quotesContainer2 {
+            .cc_border_2b {
+                padding: 0px 6px;
+                .cc_quotesContainer3 {
+                    height: 74%;
+                }
+            }
+        }
+    }
+    @include bp-medium-isixpls {
+        height: 632px;
+        .cc_quotesContainer2 {
+            .cc_border_2b {
+                padding: 0px 18px;
+            }
+            .cc_quotesContainer3 {
+                .cc_quotesLeft {
+                    height: 224px;
+                }
+            }
+        }
+    }
+    @include bp-xlarge-ipad {
+        .cc_quotesContainer2 {
+            .cc_quotesContainer3 {
+                margin-top:50px;
+                .cc_quotesLeft {
+                    margin-left: 74px;
+                    margin-right: 0;
+                    ul {
+                        margin: 0;
+                    }
+                    img {
+                        object-fit: cover;
+                        height: 100%;
+                    }
+                }
+                .cc_quotesRight {
+                    margin-right: 74px;
+                    .cc_qp {
+                        padding: 0px;
+                    }
+                    .cc_topTtxt {
+                        p {
+                            font-size:66px;
                         }
                     }
-                    .cc_qbq {}
+                    .cc_subHdiv {
+                        top: 80px;
+                    }
+                    .cc_qparadiv {
+                        top: 122px;
+                    }
+                    .cc_border_6 {
+                        top:150px;
+                    }
+                    .cc_qsubH {
+                        font-size: 18px;
+                    }
+                    .cc_qqbq {
+                        ul {
+                            li {
+                                display: none;
+                                p {
+                                    padding-left: 0px;
+                                    padding-right: 0px;
+                                }
+                            }
+                        }
+                    }
+                    .cc_qbq {
+                        padding-top:184px;
+                    }
                     .cc_qbtn {
-                        display:none;
-                        &:hover {}
+                        top:254px;
                     }
                 }
             }
         }
     }
 }
-

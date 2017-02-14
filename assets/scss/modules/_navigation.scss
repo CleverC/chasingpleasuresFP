@@ -63,7 +63,7 @@
         font-size: 0.8rem;
         line-height: 1;
         &:hover:not(.button) {
-            background-color: #42525D;
+            background-color: rgba(0, 0, 0, 0.32);
         }
     }
     .menu .active > a {
@@ -118,28 +118,47 @@
 #masthead {
     @include breakpoint(small only) {
         #site-navigation {
-            margin: 0;
+            margin: 0 auto;
+            text-align: center;
+            background-color: #fff;
+            #cc_mobliewpMenu {
+                text-align: center;
+            }
             .cc_social-holderTitle {
                 display: none;
             }
             .menu-icon {
                 color: #808284;
             }
+            .menu li:not(:last-child) {
+                border-right: none;
+            }
             ul {
                 font-family: 'Copperplate Light', $body-font-family;
-                font-size: 12px;
                 letter-spacing: 4px;
                 text-transform: uppercase;
+                background-color: #fff;
                 a {
                     color: #808284;
                     font-weight: normal !important;
+                    font-size: 10px;
+                    display: block;
+                    border-bottom: 1px solid #cacaca;
                 }
             }
         }
         .cc_mobile_social {
             display: block;
-            margin: 0 auto;
-            text-align: center;
+           ul li a{
+              border-bottom: none !important;
+            }
+            .menu li:not(:last-child) {
+                border-right: none;
+
+            }
+            ul li {
+                margin: 0 auto;
+            }
             #cc_sitebyLink,
             .cc_copylinkClass {
                 display: none;

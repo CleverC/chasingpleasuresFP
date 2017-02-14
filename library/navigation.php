@@ -13,6 +13,7 @@ register_nav_menus(array(
 	'top-bar-gallery1-l' => 'Gallery1-l Top Bar',
 	'top-bar-gallery1-r' => 'Gallery1-r Top Bar',
 	'mobile-nav' => 'Mobile',
+	'mobie-nav-gallery' => 'Mobile-gallery',
 
 ));
 
@@ -105,6 +106,23 @@ if ( ! function_exists( 'foundationpress_mobile_nav' ) ) {
 			'menu'           => __( 'mobile-nav', 'foundationpress' ),
 			'menu_class'     => 'vertical menu',
 			'theme_location' => 'mobile-nav',
+			'items_wrap'     => '<ul id="%1$s" class="%2$s" data-accordion-menu>%3$s</ul>',
+			'fallback_cb'    => false,
+			'walker'         => new Foundationpress_Mobile_Walker(),
+		));
+	}
+}
+
+/**
+ * Mobile gallery navigation - topbar (default) or offcanvas
+ */
+if ( ! function_exists( 'foundationpress_mobile_gallery_nav' ) ) {
+	function foundationpress_mobile_gallery_nav() {
+		wp_nav_menu( array(
+			'container'      => false,                         // Remove nav container
+			'menu'           => __( 'mobile-nav', 'foundationpress' ),
+			'menu_class'     => 'vertical menu',
+			'theme_location' => 'mobie-nav-gallery',
 			'items_wrap'     => '<ul id="%1$s" class="%2$s" data-accordion-menu>%3$s</ul>',
 			'fallback_cb'    => false,
 			'walker'         => new Foundationpress_Mobile_Walker(),

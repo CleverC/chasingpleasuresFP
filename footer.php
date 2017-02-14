@@ -15,10 +15,10 @@
 			<footer id="footer">
 			  <div class="cc_border_5 row align-middle align-center">
 				<div class="medium-3 small-12 column cc_sitebyCol">
-				<a href="http://www.clevercampbell.com" target="_blank" class="cc_sitebyclassLink"><p id="cc_sitebyLink">Site Designed &amp; Developed by Clever Campbell |</p></a>
+				<a href="http://www.clevercampbell.com" target="_blank" class="cc_sitebyclassLink"><p id="cc_sitebyLink">Site Designed &amp; Developed by Clever Campbell </p></a>
 					<div class="cc_copyR">
 						<a href="<?php echo home_url(); ?>">
-        					<p class="cc_copylinkClass"> &copy;&nbsp;<?php echo date('Y');?>
+        					<p class="cc_copylinkClass"> | &copy;&nbsp;<?php echo date('Y');?>
 								 <?php bloginfo('description');?> </p>
 						</a>
 					</div>

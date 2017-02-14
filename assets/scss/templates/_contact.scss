@@ -131,54 +131,63 @@
 
 /************************CONTACT SECTION MEDIA QUERIES****************
 **********************************************************************/
+
 @include bp-small {
-.cc_contactContainer {
-    height:750px;
-    &:before {}
-    .cc_contactContainer2 {
-        height:609px;
-        width:92%;
-        .cc_border_1 {
-            width:91%;
-        }
-        .cc_border_2 {
-            width:98%;
-            height:98.7%;
-        }
-        .cc_rowContactseven {
-            .cc_contactrowrow {
-                margin:0;
+    .cc_contactContainer {
+        height: 684px;
+        .cc_contactContainer2 {
+            height: 578px;
+            width: 92%;
+            top:50px;
+            .cc_border_1 {
+                width: 91%;
             }
-            #cc_contactleft {
-                display:none;
-                img {}
-                ul {}
-                li {}
-                #first {}
+            .cc_border_2 {
+                width: 98%;
+                height: 98.7%;
             }
-            #cc_contactright {
-                padding:8px;
-                padding-top:60px;
-                .cc_contactTitle {}
-                .cc_contactsubTitle {}
+            .cc_rowContactseven {
+                #cc_contactleft{
+                    display:none;
+                }
+                .cc_contactrowrow {
+                    margin: 0;
+                }
+                #cc_contactright {
+                    padding: 8px;
+                    padding-top: 60px;
+                }
+                    form {
+                        p {
+                            ::placeholder {
+                                font-size: 8px;
+                            }
+                        }
+                    }
+                input[type="submit"] {
+                    font-size: 30px;
+                }
             }
-            textarea,
-            input {
-            form {
-                p {}
+            input[type="submit"] {
+                font-size: 30px;
             }
-        }
-        input[type="submit"] {
-            font-size:30px;
-        }
-    }
-        textarea {}
-        input[type="submit"] {
-            font-size:30px;
-            &:hover {}
         }
     }
 }
 
-
+@include bp-xlarge-ipad{
+    .cc_contactContainer{
+        .cc_contactContainer2{
+            width:92%;
+            .cc_rowContactseven{
+                #cc_contactleft{
+                    padding:0px;
+                }
+                #cc_contactright{
+                    padding-left:36px;
+                    padding-right:0px;
+                }
+            }
+        }
+    }
 }

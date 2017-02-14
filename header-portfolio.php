@@ -38,7 +38,7 @@
 			<div class="top-bar-right" id=:"cc_mobilewpMenu">
 
 		<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) === 'topbar' ) : ?>
-					<?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
+					<?php get_template_part( 'template-parts/mobile-top-bar-gallery' ); ?>
 				<?php endif; ?>
 			</div>
 			<div class="cc_social-holder cc_mobile_social">

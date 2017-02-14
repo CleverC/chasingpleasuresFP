@@ -1,264 +1,350 @@
-/************************ABOUT SECTION*********************************
+    /************************ABOUT SECTION*********************************
 **********************************************************************/
-
-.cc_aboutContainer {
-    height: 1930px;
-    position: relative;
-    overflow: hidden;
-    &:before {
-        content: '';
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-        opacity: 0.5;
-        background: url("../images/orangephotographie_details_0007.jpg") no-repeat center center;
-        background-size: cover;
-    }
-    .cc_aboutContainer2 {
-        top: 91px;
-        width: 100%;
-        height: auto;
-        background-color: $main-bk-color;
-        position: relative;
-        padding-top: 12px;
-        padding-bottom: 12px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        h2 {
-            font-family: 'Monsieur La Doulaise', $body-font-family;
-        }
-        .cc_abouttxt1stColumn {
-            padding-bottom: 50px;
-            .cc_topTtxt {
-                position: relative;
-                left: 47%;
-                transform: translateX(-50%);
-                p {
-                    font-size: 100px;
-                    color: #fff;
-                    font-family: 'bodega script';
-                    font-weight: 400;
-                    // text-shadow:0 0 #000;
-                    height: 113px;
-                    margin: 0;
-                }
-            }
-            .cc_subTtxt {
-                position: absolute;
-                left: 50%;
-                transform: translateX(-50%);
-                top: 88px;
-                z-index: 2;
-                h2 {
-                    margin-top: 4px;
-                }
-            }
-            .cc_subHdiv {
-                position: relative;
-            }
-        }
-        .cc_border_1 {
-            border: $cc_border;
-            width: 97%;
-            margin: 0 auto;
-            margin-top: 6px;
-            margin-bottom: 6px;
-        }
-        .cc_border_2 {
-            border: $cc_border;
-            width: 99%;
-            margin: 0 auto;
-            margin-top: 6px;
-            margin-bottom: 6px;
-        }
-        .cc_aboutheadertitleRow {
-            text-align: center;
-            ;
-            margin-bottom: 0px;
-            .cc_asubH {
-                line-height: 3;
-                text-align: center;
-            }
-            .cc_ap1 {
-                font-family: 'Copperplate Light', $body-font-family;
-                font-size: 11px;
-                padding-bottom: 12px;
-                letter-spacing: 3px;
-                text-transform: uppercase;
-            }
-        }
-        .cc_ap2ndrow,
-        .cc_ptxcol1,
-        .cc_apcol2 {
-            text-align: justify !important;
-        }
-        .cc_aboutimg1Column {
-            height: 450px;
-            position: relative;
-            overflow: hidden;
-            img {
-                object-fit: cover;
-                position: absolute;
-                height: 100%;
-                width: 100%;
-            }
-        }
-        .cc_aboutimg2Column {
-            height: auto;
-            position: relative;
-            overflow: hidden;
-            img {
-                object-fit: cover;
-                position: absolute;
-                height: 100%;
-                width: 100%;
-                padding-top: 36px;
-            }
-        }
-        .cc_aboutmeetRow {
-            padding-top: 85px;
-            padding-bottom: 120px;
-            width: 100%;
-            h4 {
-                font-size: 26px;
-            }
-            .cc_aboutustextTitle {
-                margin: 0 auto;
-                line-height: 2.5;
-            }
-        }
-        .cc_asubH {
-            padding-bottom: 10px;
-            text-align: center;
-        }
-        .cc_aboutusparaText {
-            text-align: justify;
-        }
-        .cc_aq {
-            margin: 0 auto;
-            font-family: 'Copperplate Light', $body-font-family;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 2.5px;
-        }
-    }
-}
-
-//--IE fix for pictures--//
-.post {
-    &__image-container {
-        width: 100%; // the same width and height as for the <img>
-        height: 100%;
-        &.compat-object-fit {
-            position: relative; // for the link fix
-            background-size: cover;
-            background-position: center center;
-            > a {
-                // link fix
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-            }
-            .post__featured-image {
-                // hide image if object fit is not supported
-                display: none
-            }
-        }
-    }
-    &__featured-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-}
-
-
-/************************ABOUT SECTION MEDIA QUERIES*******************
-**********************************************************************/
-
-@include bp-small {
+    
     .cc_aboutContainer {
-        height: 240vh;
+        height: 1930px;
+        position: relative;
+        overflow: hidden;
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.5;
+            background: url("../images/orangephotographie_details_0007.jpg") no-repeat center center;
+            background-size: cover;
+        }
         .cc_aboutContainer2 {
-            .cc_border_1 {
-                width: 98%;
-                margin-top: 2px;
+            top: 91px;
+            width: 100%;
+            height: auto;
+            background-color: $main-bk-color;
+            position: relative;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            h2 {
+                font-family: 'Monsieur La Doulaise', $body-font-family;
             }
-            .cc_border_2 {
-                width: 98%;
-                margin-top: 4px;
-                margin-bottom: 4px;
-                padding: 0px 12px;
-            }
-            h2 {}
             .cc_abouttxt1stColumn {
-                padding-bottom: 28px;
+                padding-bottom: 50px;
                 .cc_topTtxt {
-                    height: 53px;
-                    p {}
+                    position: relative;
+                    left: 47%;
+                    transform: translateX(-50%);
+                    p {
+                        font-size: 100px;
+                        color: #fff;
+                        font-family: 'bodega script';
+                        font-weight: 400;
+                        // text-shadow:0 0 #000;
+                        height: 113px;
+                        margin: 0;
+                    }
                 }
                 .cc_subTtxt {
-                    top: 44px;
-                    h2 {}
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: 88px;
+                    z-index: 2;
+                    h2 {
+                        margin-top: 4px;
+                    }
                 }
-                .cc_subHdiv {}
-                .cc_ap2ndrow {
-                    display: none;
+                .cc_subHdiv {
+                    position: relative;
                 }
             }
+            .cc_border_1 {
+                border: $cc_border;
+                width: 97%;
+                margin: 0 auto;
+                margin-top: 6px;
+                margin-bottom: 6px;
+            }
+            .cc_border_2 {
+                border: $cc_border;
+                width: 99%;
+                margin: 0 auto;
+                margin-top: 6px;
+                margin-bottom: 6px;
+            }
             .cc_aboutheadertitleRow {
-                padding-top: 10px;
+                text-align: center;
+                ;
+                margin-bottom: 0px;
                 .cc_asubH {
-                    line-height: 1.5;
+                    line-height: 3;
+                    text-align: center;
                 }
                 .cc_ap1 {
-                    font-size: 8px;
-                    padding-bottom: 0px;
-                    text-align: justify;
+                    font-family: 'Copperplate Light', $body-font-family;
+                    font-size: 11px;
+                    padding-bottom: 12px;
+                    letter-spacing: 3px;
+                    text-transform: uppercase;
                 }
             }
             .cc_ap2ndrow,
             .cc_ptxcol1,
-            .cc_apcol2 {}
+            .cc_apcol2 {
+                text-align: justify !important;
+            }
             .cc_aboutimg1Column {
-                height: auto;
+                height: 450px;
+                position: relative;
+                overflow: hidden;
                 img {
-                    object-fit: contain;
-                    height: auto;
-                    position: relative;
+                    object-fit: cover;
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
                 }
             }
             .cc_aboutimg2Column {
+                height: auto;
+                position: relative;
+                overflow: hidden;
                 img {
-                    position:relative;
-                    padding-top:20px;
-                    padding-bottom:20px;
-                }
-                .cc_aboutimg2Row{
-                    margin:0px;
-                    p{
-                        margin:0px;
-                    }
+                    object-fit: cover;
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    padding-top: 36px;
                 }
             }
             .cc_aboutmeetRow {
-                padding-top: 24px;
-                padding-bottom:0px;
-                .cc_aboutustextTitle {}
-            }
-
-            .cc_aboutusparaText {}
-            .cc_aq {}
-            .cc_abouttextColumn {
-                .cc_abouttext2Row {
-                    .cc_asubH {
-                font-size:14px !important;
-            }
+                padding-top: 85px;
+                padding-bottom: 120px;
+                width: 100%;
+                h4 {
+                    font-size: 26px;
                 }
+                .cc_aboutustextTitle {
+                    margin: 0 auto;
+                    line-height: 2.5;
+                }
+            }
+            .cc_asubH {
+                padding-bottom: 10px;
+                text-align: center;
+            }
+            .cc_aboutusparaText {
+                text-align: justify;
+            }
+            .cc_aq {
+                margin: 0 auto;
+                font-family: 'Copperplate Light', $body-font-family;
+                font-size: 12px;
+                text-transform: uppercase;
+                letter-spacing: 2.5px;
             }
         }
     }
-}
+    
+    //--IE fix for pictures--//
+    .post {
+        &__image-container {
+            width: 100%; // the same width and height as for the <img>
+            height: 100%;
+            &.compat-object-fit {
+                position: relative; // for the link fix
+                background-size: cover;
+                background-position: center center;
+                > a {
+                    // link fix
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                }
+                .post__featured-image {
+                    // hide image if object fit is not supported
+                    display: none
+                }
+            }
+        }
+        &__featured-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    /************************ABOUT SECTION MEDIA QUERIES*******************
+**********************************************************************/
+    
+    .cc_aboutContainer {
+        height: 234vh;
+        @include bp-small {
+            .cc_aboutContainer2 {
+                top: 50px;
+                .cc_border_1 {
+                    width: 98%;
+                    margin-top: 2px;
+                }
+                .cc_border_2 {
+                    width: 98%;
+                    margin-top: 4px;
+                    margin-bottom: 4px;
+                    padding: 0px 12px;
+                }
+                .cc_abouttxt1stColumn {
+                    padding-bottom: 28px;
+                    .cc_aboutheadertitleRow {
+                        padding-top: 10px;
+                        .cc_subTtxt {
+                            top: 38px;
+                            h2 {
+                                line-height: 36px;
+                            }
+                        }
+                        .cc_topTtxt {
+                            height: 53px;
+                            p {
+                                line-height: 1.5;
+                            }
+                        }
+                        .cc_subHdiv {
+                            padding-top: 12px;
+                            h4 {
+                                line-height: 1.4;
+                            }
+                        }
+                        .cc_ap1 {
+                            font-size: 8px;
+                            padding-bottom: 0px;
+                            text-align: justify;
+                        }
+                    }
+                    .cc_ap2ndrow {
+                        display: none;
+                    }
+                }
+                .cc_ap2ndrow,
+                .cc_ptxcol1,
+                .cc_aboutimg1Column {
+                    height: auto;
+                    img {
+                        object-fit: contain;
+                        height: auto;
+                        position: relative;
+                    }
+                }
+                .cc_aboutimg2Column {
+                    img {
+                        position: relative;
+                        padding-top: 20px;
+                        padding-bottom: 20px;
+                    }
+                    .cc_aboutimg2Row {
+                        margin: 0px;
+                        p {
+                            margin: 0px;
+                        }
+                    }
+                }
+                .cc_aboutmeetRow {
+                    padding-top: 24px;
+                    padding-bottom: 0px;
+                    .cc_abouttextColumn {
+                        .cc_abouttext2Row {
+                            .cc_asubH {
+                                font-size: 15px !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @include bp-medium {
+            height: 197vh;
+            .cc_aboutContainer2 {
+                .cc_border_2 {
+                    padding: 0px 26px;
+                }
+            }
+        }
+        @include bp-medium-isixpls {
+            height: 182vh;
+        }
+        @include bp-xlarge-ipad {
+            height:166vh;
+            .cc_aboutContainer2 {
+                .cc_border_2 {
+                    margin-top: 4px;
+                    margin-bottom: 4px;
+                }
+                .cc_abouttxt1stColumn {
+                    .cc_topTtxt p {
+                        font-size: 66px;
+                        padding-top: 26px;
+                    }
+                }
+                .cc_aboutheadertitleRow {
+                    .cc_asubH {
+                        font-size: 18px;
+                    }
+                    .cc_ap1 {
+                        font-size: 9px;
+                    }
+                }
+                .cc_ap2ndrow {
+                    p {
+                        font-size: 12px;
+                    }
+                    .cc_apcol1{
+                        padding-left:0px;
+                    }
+                    .cc_apcol2{
+                        padding-right:0px;
+                    }
+                }
+                .cc_aboutimg1Column {
+                    height: 342px;
+                }
+                .cc_aboutmeetRow {
+                    padding-top: 40px;
+                    padding-bottom:88px;
+                    h4 {
+                        font-size: 16px;
+                    }
+                    .cc_abouttextColumn {
+                        padding-left:0px;
+                        p {
+                            font-size: 12px;
+                            padding-bottom:10px;
+                        }
+                    }
+                    .cc_aboutustextTitle {
+                        font-size: 32px;
+                    }
+                    .cc_aboutimg2Column{
+                        padding-left:0px;
+                    }
+                }
+            }
+        }
+        @include bp-xlarge-ipadpro{
+            height:118vh;
+        }
+        @include bp-xxxlarge{
+            height:203vh;
+        }
+    }
+    
+    //iphone 4
+    @media(min-width: 320px) and (height: 480px) {
+        .cc_aboutContainer {
+            height: 276vh;
+        }
+    }
+
+    @media(min-width:360px) and (height:640px){
+        .cc_aboutContainer{
+            height:207vh;
+        }
+    }

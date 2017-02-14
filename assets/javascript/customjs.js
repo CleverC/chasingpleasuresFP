@@ -25,11 +25,30 @@ $(window).scroll(function() {
      }
  });
 
+//--Hides/shows right left gallery arrow on scroll--//
+$(window).scroll(function() {
+
+    if ($(this).scrollTop()>90)
+     {
+        $('.scrolliconb').show();
+     }else{
+      $('.scrolliconb').hide();
+     }
+ });
+
+//-- Hide toTop arrow on load --//
+$(document).scroll(function(){
+  if($(this).scrollTop() > 1){  
+    $('.scrollicon').css('opacity', '0.5');
+    $('.scrollicon').css('visibility', 'visible');
+  }
+});
+
 //-- Hide toTop arrow on load --//
 $(document).scroll(function(){
 	if($(this).scrollTop() > 1){  
-		$('.scrollicon').css('opacity', '0.5');
-		$('.scrollicon').css('visibility', 'visible');
+		$('.scrolliconb').css('opacity', '0.5');
+		$('.scrolliconb').css('visibility', 'visible');
 	}
 });
 

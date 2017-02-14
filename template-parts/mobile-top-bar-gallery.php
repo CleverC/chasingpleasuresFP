@@ -9,7 +9,7 @@
 ?>
 
 <nav class="vertical menu cc_mobilenav" id="mobile-menu" role="navigation">
-  <?php foundationpress_mobile_nav(); ?>
+  <?php foundationpress_mobile_gallery_nav(); ?>
 </nav>
 
 

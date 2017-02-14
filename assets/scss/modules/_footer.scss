@@ -33,6 +33,7 @@
                 #cc_sitebyLink {
                     margin: 0;
                     text-transform: uppercase;
+                    text-decoration:underline;
                     font-size: 10px;
                     color: rgba(128, 130, 132, 1);
                     &:hover {
@@ -41,6 +42,7 @@
                 }
                 .cc_copyR {
                     @extend #cc_sitebyLink;
+                    text-decoration:none;
                     padding-top: 4px;
                     margin-bottom: 0px;
                     a {
@@ -48,7 +50,7 @@
                     }
                     .cc_copylinkClass {
                         margin-bottom: 0px;
-                        font-size: 12px;
+                        font-size: 12px;         
                     }
                 }
             }
@@ -151,6 +153,7 @@
                     }
                     #cc_sitebyLink {
                         margin:0px;
+                        text-decoration:underline;
                     }
                     .cc_copyR {
                         .cc_copylinkClass {
@@ -168,4 +171,23 @@
             }
         } //-- end of main row
     }
+    @include bp-medium {
+        #cc_sitebyLink{
+            padding-left:22px;
+        }
+    }
+    @include bp-medium-isixpls {
+        #cc_sitebyLink{
+            padding-left: 36px;
+        }
+    }
+    @include bp-xlarge-ipad{
+        #footer{
+            .cc_border_5{
+                width:100%;
+            }
+        }
+
+    }
+
 } //--end of footer container
