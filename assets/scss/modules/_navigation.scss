@@ -146,15 +146,19 @@
                     border-bottom: 1px solid #cacaca;
                 }
             }
+            .cc_social-list {
+                li a {
+                    font-size: 16px;
+                }
+            }
         }
         .cc_mobile_social {
             display: block;
-           ul li a{
-              border-bottom: none !important;
+            ul li a {
+                border-bottom: none !important;
             }
             .menu li:not(:last-child) {
                 border-right: none;
-
             }
             ul li {
                 margin: 0 auto;

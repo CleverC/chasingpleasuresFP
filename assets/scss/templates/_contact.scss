@@ -34,6 +34,8 @@
             width: 99%;
             height: 98.5%;
             margin: 0 auto;
+
+
         }
         .cc_rowContactseven {
             font-weight: 300;
@@ -73,6 +75,12 @@
                 .cc_contactsubTitle {
                     text-align: center;
                     padding-bottom: 6px;
+                }
+                span.wpcf7-not-valid-tip {
+                    display: none;
+                }
+                .wpcf7-not-valid {
+                    border-bottom: 2px solid #990000;
                 }
             }
             textarea,
@@ -123,32 +131,60 @@
                     cursor: pointer;
                     text-shadow: 1px 6px 10px rgba(#000000, 0.7);
                 }
+                &:focus {
+                    outline-color: #FAF5F2;
+                }
+                
             }
+
         }
     }
 }
+div.wpcf7-validation-errors{
+    background: #990000;
+    border: 1px solid #7c0101;
+    color: #fff;
+}
 
+div.wpcf7-response-output {
+    margin: 2em 0;
+    padding: 10px;
+    padding-left:15px;
+    border-radius: 2px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+}
+
+.wpcf7-mail-sent-ok {
+     background: #3c763d;
+     border: 1px solid #3c763d !important;
+     color: #fff;
+}
 
 /************************CONTACT SECTION MEDIA QUERIES****************
 **********************************************************************/
 
 @include bp-small {
     .cc_contactContainer {
-        height: 684px;
+        height: 696px;
         .cc_contactContainer2 {
-            height: 578px;
+            height: 590px;
             width: 92%;
-            top:50px;
+            top: 50px;
             .cc_border_1 {
                 width: 91%;
             }
             .cc_border_2 {
                 width: 98%;
                 height: 98.7%;
+                @include bp-small{
+                padding-bottom:21px;
+            }
             }
             .cc_rowContactseven {
-                #cc_contactleft{
-                    display:none;
+                #cc_contactleft {
+                    display: none;
                 }
                 .cc_contactrowrow {
                     margin: 0;
@@ -157,35 +193,47 @@
                     padding: 8px;
                     padding-top: 60px;
                 }
-                    form {
-                        p {
-                            ::placeholder {
-                                font-size: 8px;
-                            }
+                form {
+                    p {
+                        ::placeholder {
+                            font-size: 8px;
                         }
                     }
+                }
                 input[type="submit"] {
                     font-size: 30px;
+                    @include bp-small{
+                    height:68px;
                 }
-            }
-            input[type="submit"] {
-                font-size: 30px;
+                }
             }
         }
     }
 }
 
-@include bp-xlarge-ipad{
-    .cc_contactContainer{
-        .cc_contactContainer2{
-            width:92%;
-            .cc_rowContactseven{
-                #cc_contactleft{
-                    padding:0px;
+div.wpcf7-response-output {
+    @include bp-small{
+        font-size:9px;
+        padding-left:6px;
+        padding:4px;
+        margin:0px;
+    }
+    @include bp-medium{
+        font-size:10px;
+    }   
+}
+
+@include bp-xlarge-ipad {
+    .cc_contactContainer {
+        .cc_contactContainer2 {
+            width: 92%;
+            .cc_rowContactseven {
+                #cc_contactleft {
+                    padding: 0px;
                 }
-                #cc_contactright{
-                    padding-left:36px;
-                    padding-right:0px;
+                #cc_contactright {
+                    padding-left: 36px;
+                    padding-right: 0px;
                 }
             }
         }

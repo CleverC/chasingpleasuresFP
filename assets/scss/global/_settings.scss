@@ -87,7 +87,7 @@ $breakpoints: (
   medium: 640px,
   large: 768px,
   xlarge: 780px,
-  xxlarge: 1440px,
+  xxlarge: 1600px,
   special:360px,
 );
 $print-breakpoint: large;
@@ -702,7 +702,7 @@ $chasingpleasure-shadow:1px 6px 6px rgba(#000000, 0.4);
 }
 
 @mixin bp-xxxlarge {
-    @media (min-width: 1600px) and (max-width: 1920px) {
+    @media (min-width: 1600px) and (max-width: 1920px) and (-webkit-min-device-pixel-ratio: 1) {
         @content;
     }
 }

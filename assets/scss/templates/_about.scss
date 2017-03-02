@@ -178,8 +178,10 @@
 **********************************************************************/
     
     .cc_aboutContainer {
-        height: 234vh;
+        // height: 234vh;
         @include bp-small {
+            height: auto;
+            padding-bottom:96px;
             .cc_aboutContainer2 {
                 top: 50px;
                 .cc_border_1 {
@@ -337,14 +339,20 @@
     }
     
     //iphone 4
-    @media(min-width: 320px) and (height: 480px) {
-        .cc_aboutContainer {
-            height: 276vh;
-        }
-    }
+    // @media(min-width: 320px) and (height: 480px) {
+    //     .cc_aboutContainer {
+    //         height: 276vh;
+    //     }
+    // }
 
     @media(min-width:360px) and (height:640px){
         .cc_aboutContainer{
             height:207vh;
+        }
+    }
+    //nexus and galaxy phones.
+    @media(min-width:412px) and (max-height:732px){
+        .cc_aboutContainer{
+            height: 202vh;
         }
     }

@@ -27,7 +27,7 @@
             margin: 0 auto;
         }
         .cc_quotesContainer3 {
-            height: 75%;
+            height: 90%;
             margin: 0 auto;
             display: inline-block;
             .cc_quotesLeft {
@@ -37,9 +37,10 @@
                 margin-right: 40px;
                 overflow: hidden;
                 img {
-                    object-fit: contain;
+                    object-fit: cover;
                     position: absolute;
                     width: 100%;
+                    height:100%;
                 }
                 li {
                     display: none;
@@ -184,10 +185,13 @@
                 height: 98.8%;
             }
             .cc_quotesContainer3 {
-                height: 78%;
+                height: 85%;
                 .cc_quotesLeft {
                     margin: 0px;
                     height: 200px;
+                    img{
+                        height:auto;
+                    }
                     ul {
                         margin: 0px;
                     }
@@ -199,6 +203,7 @@
                                 p {
                                     font-size: 8px;
                                     padding: 10px;
+                                    padding-top:0px;
                                 }
                             }
                         }
@@ -250,6 +255,7 @@
         .cc_quotesContainer2 {
             .cc_quotesContainer3 {
                 margin-top:50px;
+                height:75%;
                 .cc_quotesLeft {
                     margin-left: 74px;
                     margin-right: 0;

@@ -3,7 +3,7 @@
         <div class="cc_border_1b row expanded align-middle">
             <div class="cc_border_2b row expanded align-middle align-center">
                 <div class="cc_quotesContainer3 row large-collapse align-center">
-                    <div class="medium-4 small-12 column cc_quotesLeft">
+                    <div class="medium-6 small-12 column cc_quotesLeft">
                         <ul class="slidesQuotes">
                         <?php 
 

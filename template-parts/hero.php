@@ -4,6 +4,7 @@
             <div class="cc_border_2 row align-middle">
                 <!-- WORDPRESS MENU -->
                 <?php get_template_part('template-parts/in-div-nav'); ?>
+                <?php get_template_part('template-parts/in-div-nav-mobile'); ?>
                 <!-- WORDPRESS MENU END -->
                 <!-- GALLERY ROW -->
                 <div class="cc_heroRow2 row">
